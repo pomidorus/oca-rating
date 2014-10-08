@@ -10,10 +10,36 @@
       = link_to 'Добавить город', new_city_path
   %section.l-cities
     %nav.b-filter-region
-      %span
-        Все области
-      %span
-        Киевская
-      %span
-        Донецкая
+      %button.filter.active
+        %span.label
+          Все области
+      %button.filter.disabled
+        %span.label
+          Киевская
+      %button.filter
+        %span.label
+          Донецкая
+      %button.filter
+        %span.label
+          Донецкая
+      %button.filter
+        %span.label
+          Донецкая
+      %button.filter
+        %span.label
+          Донецкая
+
+    %section.b-cities
+      - 10.times do
+        .b-city
+          .title
+            Донецк
+          .website
+            = link_to 'lukianchenko.donetsk.ua'
+      - 10.times do
+        .b-city
+          .title
+            Константиновка
+          .website
+            = link_to 'lukianchenko.donetsk.ua', 'http://www.google.com'
 

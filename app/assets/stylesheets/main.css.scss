@@ -23,5 +23,52 @@
 
   .l-cities {
     margin: 18px 0px;
+
+    .b-filter-region {
+      .filter {
+        border: none;
+        background: none;
+        padding: 6px 11px;
+        &.active {
+          background-color: #36caff;
+          .label {
+            border: none;
+          }
+        }
+        &:hover {
+          &:not(.active) {
+            color: red;
+          }
+        }
+        &.disabled{
+          color: #eee;
+          cursor: inherit;
+          .label {
+            border: none;
+          }
+        }
+      }
+      .label {
+        border-bottom: 1px dotted cornflowerblue;
+      }
+    }
+
+    .b-cities {
+      margin: 16px 0px;
+      .b-city {
+        padding: 11px 0px;
+        display: flex;
+        width: 500px;
+        .title {
+          flex: 0.5;
+        }
+        .website {
+          flex: 0.5;
+        }
+        &:hover {
+          background-color: #eee;
+        }
+      }
+    }
   }
 }
