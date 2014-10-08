@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background: #fff;
+  background: -webkit-linear-gradient(#e6e069, white) no-repeat;
+  background-size: 100% 165px;
+}

@@ -1,14 +1,19 @@
-%header
-  %h1 OCA Rating
-  %p= "Рейтинг городов по доступности открытых данных. Для связи:"
-  = mail_to('oca.rating@gmail.com').html_safe
+%article.l-main-index
+  %header
+    %h1
+      Доступность
+    %p
+      Сайт содержит ссылки и рейтинг общедоступных открытых данных городов Украины
 
-%section
-  %nav
-    %span
-      Все области
-    %span
-      Киевская
-    %span
-      Донецкая
+  %section.l-add-city
+    %button
+      = link_to 'Добавить город', new_city_path
+  %section.l-cities
+    %nav.b-filter-region
+      %span
+        Все области
+      %span
+        Киевская
+      %span
+        Донецкая
 
