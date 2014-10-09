@@ -1,5 +1,4 @@
 Region.delete_all
-
 Region.create!({uk_name: 'Вінницька'})
 Region.create!({uk_name: 'Волинська'})
 Region.create!({uk_name: 'Дніпропетровська'})
@@ -26,8 +25,6 @@ Region.create!({uk_name: 'Чернівецька'})
 Region.create!({uk_name: 'Чернігівська'})
 Region.create!({uk_name: 'АР Крим'})
 
-
 City.delete_all
-
 City.create!({uk_title: 'Донецьк', lgs_link: 'http://www.google.com'})
 City.create!({uk_title: 'Полтава', lgs_link: 'http://www.poltava.com'})
