@@ -1,13 +1,12 @@
-// Place all the styles related to the main controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "values";
+
 .l-main-index {
   padding: 0 8.3%;
 
   header {
     h1 {
       margin-top: 0px;
-      padding-top: 23px;
+      padding-top: 42px;
     }
   }
 
@@ -22,13 +21,16 @@
   }
 
   .l-cities {
-    margin: 18px 0px;
+    margin: 56px 0px;
 
     .b-filter-region {
       .filter {
         border: none;
         background: none;
-        padding: 6px 11px;
+        padding: 6px 7px;
+        margin-bottom: 10px;
+        font-size: 0.9em;
+        color: #444;
         &.active {
           background-color: #36caff;
           .label {
@@ -37,7 +39,10 @@
         }
         &:hover {
           &:not(.active) {
-            color: red;
+            color: darken($main-color, 30%);
+            .label {
+              border-bottom: 1px dotted darken($main-color, 30%);
+            }
           }
         }
         &.disabled{
@@ -49,7 +54,7 @@
         }
       }
       .label {
-        border-bottom: 1px dotted cornflowerblue;
+        border-bottom: 1px dotted #444;
       }
     }
 

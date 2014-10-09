@@ -1,7 +1,33 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+# Region.delete_all
 #
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# Region.create!({uk_name: 'Вінницька'})
+# Region.create!({uk_name: 'Волинська'})
+# Region.create!({uk_name: 'Дніпропетровська'})
+# Region.create!({uk_name: 'Донецька'})
+# Region.create!({uk_name: 'Житомирська'})
+# Region.create!({uk_name: 'Закарпатська'})
+# Region.create!({uk_name: 'Запорізька'})
+# Region.create!({uk_name: 'Івано-Франківська'})
+# Region.create!({uk_name: 'Київська'})
+# Region.create!({uk_name: 'Кіровоградська'})
+# Region.create!({uk_name: 'Луганська'})
+# Region.create!({uk_name: 'Львівська'})
+# Region.create!({uk_name: 'Миколаївська'})
+# Region.create!({uk_name: 'Одеська'})
+# Region.create!({uk_name: 'Полтавська'})
+# Region.create!({uk_name: 'Рівненська'})
+# Region.create!({uk_name: 'Сумська'})
+# Region.create!({uk_name: 'Тернопільська'})
+# Region.create!({uk_name: 'Харківська'})
+# Region.create!({uk_name: 'Херсонська'})
+# Region.create!({uk_name: 'Хмельницька'})
+# Region.create!({uk_name: 'Черкаська'})
+# Region.create!({uk_name: 'Чернівецька'})
+# Region.create!({uk_name: 'Чернігівська'})
+# Region.create!({uk_name: 'АР Крим'})
+
+
+City.delete_all
+
+City.create!({uk_title: 'Донецьк', lgs_link: 'http://www.google.com'})
+City.create!({uk_title: 'Полтава', lgs_link: 'http://www.poltava.com'})

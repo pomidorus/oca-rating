@@ -5,41 +5,16 @@
     %p
       Сайт содержит ссылки и рейтинг общедоступных открытых данных городов Украины
 
-  %section.l-add-city
-    %button
-      = link_to 'Добавить город', new_city_path
   %section.l-cities
     %nav.b-filter-region
       %button.filter.active
         %span.label
           Все области
-      %button.filter.disabled
-        %span.label
-          Киевская
-      %button.filter
-        %span.label
-          Донецкая
-      %button.filter
-        %span.label
-          Донецкая
-      %button.filter
-        %span.label
-          Донецкая
-      %button.filter
-        %span.label
-          Донецкая
+      = render @regions
 
     %section.b-cities
-      - 10.times do
-        .b-city
-          .title
-            Донецк
-          .website
-            = link_to 'lukianchenko.donetsk.ua'
-      - 10.times do
-        .b-city
-          .title
-            Константиновка
-          .website
-            = link_to 'lukianchenko.donetsk.ua', 'http://www.google.com'
+      = render @cities
 
+  %section.l-add-city
+    %button
+      = link_to 'Добавить город', new_city_path
