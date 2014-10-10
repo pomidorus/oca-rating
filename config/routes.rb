@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'cities/new'
-
   resources :cities do
     resource :region, only: [:show]
   end

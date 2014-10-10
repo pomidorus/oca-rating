@@ -1,5 +1,8 @@
 .b-city
   .title
-    = city.uk_title
-  .website
-    = link_to "#{city.lgs_link}", "#{city.lgs_link}"
+    = link_to city.uk_title, city_path(city)
+  .rating
+    456
+
+  -#.website
+  -#  = link_to "#{city.lgs_link}", "#{city.lgs_link}"
