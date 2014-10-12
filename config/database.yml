@@ -63,5 +63,3 @@ test:
 production:
   <<: *default
   database: rating_production
-  host: localhost
-  username: ec2-user
