@@ -64,4 +64,4 @@ production:
   <<: *default
   database: rating_production
   username: webapp
-  password: <%= ENV['RATING_DATABASE_PASSWORD'] %>
+  password: testtest
