@@ -3,6 +3,13 @@ region: us-east-1
 # http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html
 solution_stack_name: 64bit Amazon Linux 2014.03 v1.0.7 running Ruby 2.1 (Puma)
 
+ebextensions:
+  01postgres.config:
+    packages:
+      yum:
+        postgresql-devel: []
+
+
 development:
   strategy: inplace_update
   options:
@@ -13,3 +20,5 @@ production:
   options:
     aws:autoscaling:launchconfiguration:
       InstanceType: t2.micro
+      EC2KeyName: ocarating
+      SecurityGroups: 'awseb-e-pgxjmjf7ka-stack-AWSEBSecurityGroup-HK4SKM22C39L'
