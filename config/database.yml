@@ -63,5 +63,5 @@ test:
 production:
   <<: *default
   database: rating_production
-  username: rating
+  username: webapp
   password: <%= ENV['RATING_DATABASE_PASSWORD'] %>
