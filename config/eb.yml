@@ -1,0 +1,15 @@
+app: ocarating
+region: us-east-1
+# http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html
+solution_stack_name: 64bit Amazon Linux 2014.03 v1.0.7 running Ruby 2.1 (Puma)
+
+development:
+  strategy: inplace_update
+  options:
+    aws:autoscaling:launchconfiguration:
+      InstanceType: t2.micro
+
+production:
+  options:
+    aws:autoscaling:launchconfiguration:
+      InstanceType: t2.micro
