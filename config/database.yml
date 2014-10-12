@@ -63,5 +63,5 @@ test:
 production:
   <<: *default
   database: rating_production
-  username: webapp
-  password: testtest
+  host: localhost
+  username: ec2-user
