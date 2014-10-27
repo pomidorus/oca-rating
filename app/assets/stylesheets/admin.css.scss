@@ -1,0 +1,25 @@
+@import "values";
+
+.l-admin-header {
+  padding: 0px 31px;
+  background-color: $header-color;
+  color: $text-color;
+  display: flex;
+  align-items: center;
+  h2 {
+    margin: 0 0;
+    font-size: 1.5em;
+  }
+
+  ul {
+    display: flex;
+    margin: 0 0;
+    li {
+      padding: 15px 11px;
+      &.active {
+        background-color: $active-background;
+        color: $active-color;
+      }
+    }
+  }
+}

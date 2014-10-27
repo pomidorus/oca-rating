@@ -1,3 +1,5 @@
+= render partial: 'admin/header'
+
 %article.l-cities-index
   %header
     %h1
@@ -7,3 +9,7 @@
 
   %section.b-cities
     = render partial: 'cities/city_admin', collection: @cities, as: :city
+
+  %section.l-add-city
+    %button
+      = link_to 'Добавить город', new_city_path
