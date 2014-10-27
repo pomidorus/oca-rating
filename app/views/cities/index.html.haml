@@ -1,0 +1,9 @@
+%article.l-cities-index
+  %header
+    %h1
+      Города
+    %p
+      = "#{@cities_count} города в рейтинге"
+
+  %section.b-cities
+    = render partial: 'cities/city_admin', collection: @cities, as: :city

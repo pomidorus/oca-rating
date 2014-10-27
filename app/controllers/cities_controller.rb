@@ -11,6 +11,12 @@ class CitiesController < ApplicationController
   end
 
   def index
+    @cities = City.all
+    @cities_count = @cities.length
+  end
+
+  def edit
+    @city = City.find(params[:id])
   end
 
   private
