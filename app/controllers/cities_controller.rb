@@ -10,6 +10,9 @@ class CitiesController < ApplicationController
   def show
   end
 
+  def index
+  end
+
   private
 
   def city_params
