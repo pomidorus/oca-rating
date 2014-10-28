@@ -1,1 +1,9 @@
 = render partial: 'admin/header'
+
+%article.l-cities-index
+  %header
+    %h1
+      Области
+
+  %section.b-regions
+    = render partial: 'regions/region_admin', collection: @regions, as: :region
