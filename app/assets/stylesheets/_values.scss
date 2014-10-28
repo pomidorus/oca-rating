@@ -4,5 +4,6 @@ $main-color: #e6e069;
 //admin
 $header-color: darken($main-color, 50);
 $text-color: lighten($main-color, 25);
-$active-background: lighten($main-color, 25);
 $active-color: darken($main-color, 30);
+$active-background: lighten($main-color, 25);
+$hover-background: lighten($header-color, 10);

@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :regions, only: [:index]
   resources :cities do
     resource :region, only: [:show]
   end
+
   root 'main#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

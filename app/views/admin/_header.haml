@@ -3,7 +3,7 @@
     Dostup Admin
   %nav
     %ul
-      %li
-        Области
-      %li.active
-        Города
+      %li{class: "#{current_page?('/cities') ? 'active': ''}"}
+        = link_to_unless(current_page?('/cities'), 'Города', cities_path)
+      %li{class: "#{current_page?('/regions') ? 'active': ''}"}
+        = link_to_unless(current_page?('/regions'), 'Области', regions_path)

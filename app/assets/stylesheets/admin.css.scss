@@ -15,10 +15,21 @@
     display: flex;
     margin: 0 0;
     li {
-      padding: 15px 11px;
+      padding: 15px 0px;
+      cursor: pointer;
+      a {
+        color: inherit;
+        text-decoration: none;
+        padding: 0px 11px;
+      }
+      &:hover {
+        background-color: $hover-background;
+      }
       &.active {
+        padding: 15px 11px;
         background-color: $active-background;
         color: $active-color;
+        cursor: default;
       }
     }
   }
