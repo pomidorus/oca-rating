@@ -4,12 +4,9 @@
   %header
     %h1
       Города
-    %p
-      = "#{@cities_count} города в рейтинге"
+    .new-city
+      %button
+        = link_to 'Создать город', new_city_path
 
   %section.b-cities
     = render partial: 'cities/city_admin', collection: @cities, as: :city
-
-  %section.l-add-city
-    %button
-      = link_to 'Добавить город', new_city_path
