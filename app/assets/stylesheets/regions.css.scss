@@ -1,16 +1,30 @@
-// Place all the styles related to the regions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .b-region {
-  .uk_name {
-    padding: 7px 0px;
+  display: flex;
+  padding: 7px 0px;
+
+  .uk_name, .ru_name {
+    width: 20%;
     span:hover {
       position: relative;
       left: -4px;
       padding: 7px 4px;
       background-color: #eee;
       cursor: pointer;
+    }
+  }
+}
+
+.b-region:nth-child(2) {
+  background-color: rgba(#eee,0.15);
+}
+
+.l-regions-index {
+  padding: 0 8.3%;
+
+  header {
+    margin: 36px 0px;
+    h1 {
+      margin: 0px 0px;
     }
   }
 }

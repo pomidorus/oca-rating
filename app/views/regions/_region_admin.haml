@@ -1,7 +1,10 @@
 .b-region
   .uk_name
     %span
+      = link_to region.uk_name, edit_region_path(region)
+  .ru_name
+    %span
       = region.uk_name
--#%button.filter
--#  %span.label
--#    = region.uk_name
+  .en_name
+    %span
+      = region.uk_name
