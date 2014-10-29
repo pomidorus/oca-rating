@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141009124418) do
+ActiveRecord::Schema.define(version: 20141029133111) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20141009124418) do
     t.string   "lgs_link"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "ru_title"
+    t.string   "en_title"
   end
 
   create_table "regions", force: true do |t|

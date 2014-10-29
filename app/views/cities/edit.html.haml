@@ -1,6 +1,19 @@
+= render partial: 'admin/header'
+
 %article.l-cities-edit
-  %header
-    %h1
-      = @city.uk_title
-    %p
-      = 'Режим редактирования'
+  = form_for @city, html: {class: 'b-edit-form'} do |f|
+    .uk-title
+      .label
+        = f.label :uk_title, 'Назва'
+      = f.text_field :uk_title
+    .ru-title
+      .label
+        = f.label :ru_title, 'Название'
+      = f.text_field :ru_title
+    .en-title
+      .label
+        = f.label :en_title, 'Name'
+      = f.text_field :en_title
+
+    .action-save
+      = f.submit 'Сохранить'

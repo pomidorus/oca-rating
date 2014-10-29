@@ -78,3 +78,52 @@
     }
   }
 }
+
+.l-cities-edit {
+  padding: 0 8.3%;
+
+  .b-edit-form {
+    display: flex;
+    flex-direction: column;
+    margin: 34px 0px;
+    padding: 15px 22px;
+    position: relative;
+    left: -15px;
+    background-color: rgba(#ffff00, 0.15);
+
+    font-size: 1em;
+
+    > div {
+      margin-bottom: 17px;
+    }
+
+    .label {
+      font-size: 1em;
+      line-height: 1.8;
+    }
+
+    .uk-title input {
+      outline: none;
+      border: none;
+      box-shadow: inset 0 3px 3px -2px #d4d4d4, 0 0 0 1px #cbcbcb;
+      width: 80%;
+      max-width: 600px;
+      padding: .2em .4em;
+      font-size: 200%;
+      height: 1.3em;
+      font-weight: bold;
+    }
+
+    .ru-title input, .en-title input {
+      outline: none;
+      border: none;
+      box-shadow: inset 0 3px 3px -2px #d4d4d4, 0 0 0 1px #cbcbcb;
+      width: 80%;
+      max-width: 600px;
+      padding: .3em .5em;
+      font-size: 110%;
+      height: 1.3em;
+    }
+
+  }
+}

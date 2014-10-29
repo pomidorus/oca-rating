@@ -1,4 +1,6 @@
 class CitiesController < ApplicationController
+  respond_to :html
+
   def new
     @city = City.new
   end
@@ -19,10 +21,18 @@ class CitiesController < ApplicationController
     @city = City.find(params[:id])
   end
 
+  def update
+    @city = City.find(params[:id])
+    if @city.update_attributes(city_params)
+      flash[:notice] = "Successfully updated product."
+    end
+    respond_with(@city)
+  end
+
   private
 
   def city_params
-    params.require(:city).permit(:uk_title)
+    params.require(:city).permit(:uk_title, :ru_title, :en_title)
   end
 
 end
