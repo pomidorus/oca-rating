@@ -14,6 +14,8 @@
       .label
         = f.label :en_title, 'Name'
       = f.text_field :en_title
+    .region
+      = select('city', 'region_id', Region.all.collect {|r| [ r.uk_name, r.id]}, :selected => @city.region_id)
 
     .action-save
       = f.submit 'Сохранить'

@@ -54,7 +54,7 @@
   }
 
   .b-cities {
-    .b-city:nth-child(2) {
+    .b-city:nth-child(2n) {
       background-color: rgba(#eee,0.15);
     }
     .b-city {
@@ -89,7 +89,8 @@
     padding: 15px 22px;
     position: relative;
     left: -15px;
-    background-color: rgba(#ffff00, 0.15);
+    width: 40%;
+    background-color: rgba(#ffff00, 0.10);
 
     font-size: 1em;
 
@@ -106,7 +107,7 @@
       outline: none;
       border: none;
       box-shadow: inset 0 3px 3px -2px #d4d4d4, 0 0 0 1px #cbcbcb;
-      width: 80%;
+      width: 90%;
       max-width: 600px;
       padding: .2em .4em;
       font-size: 200%;
@@ -118,9 +119,9 @@
       outline: none;
       border: none;
       box-shadow: inset 0 3px 3px -2px #d4d4d4, 0 0 0 1px #cbcbcb;
-      width: 80%;
+      width: 91%;
       max-width: 600px;
-      padding: .3em .5em;
+      padding: .5em .5em;
       font-size: 110%;
       height: 1.3em;
     }
