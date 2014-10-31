@@ -2,6 +2,10 @@
   display: flex;
   padding: 7px 0px;
 
+  &.empty {
+    color: #ddd;
+  }
+
   .uk_name, .ru_name {
     width: 20%;
     span:hover {
@@ -14,7 +18,7 @@
   }
 }
 
-.b-region:nth-child(2) {
+.b-region:nth-child(2n) {
   background-color: rgba(#eee,0.15);
 }
 

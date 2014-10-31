@@ -1,25 +1,4 @@
 = render partial: 'admin/header'
 
 %article.l-cities-edit
-  = form_for @city, html: {class: 'b-edit-form'} do |f|
-    .uk-title
-      .label
-        = f.label :uk_title, 'Назва'
-      = f.text_field :uk_title
-    .ru-title
-      .label
-        = f.label :ru_title, 'Название'
-      = f.text_field :ru_title
-    .en-title
-      .label
-        = f.label :en_title, 'Name'
-      = f.text_field :en_title
-    .region
-      = select('city', 'region_id', Region.all.collect {|r| [ r.uk_name, r.id]}, :selected => @city.region_id)
-    .site_link
-      .label
-        = f.label :link, 'Сайт горсовета'
-      = f.text_field :link
-
-    .action-save
-      = f.submit 'Сохранить'
+  = render 'cities/form'

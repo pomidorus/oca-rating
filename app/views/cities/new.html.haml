@@ -1,8 +1,8 @@
-= render 'main/header'
+= render partial: 'admin/header'
+
 %article.l-city-new
+  %section.l-new-city-form
   %header
-    %nav
-      = link_to 'Main', root_path
     %h2
-      Добавление города
+      Добавление нового города
   = render 'cities/form'

@@ -1,19 +1,12 @@
 .l-city-new {
   margin: 0 8.3%;
-
   header {
+    margin: 34px 0px;
+    width: 40%;
+    text-align: center;
     h2 {
       margin: 0 0;
     }
-  }
-
-  .l-new-city-form form {
-    margin: 0px 0px;
-    padding: 0px 0px;
-    background-color: #eee;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
   }
 }
 
@@ -82,49 +75,51 @@
 .l-cities-edit {
   padding: 0 8.3%;
 
-  .b-edit-form {
-    display: flex;
-    flex-direction: column;
-    margin: 34px 0px;
-    padding: 15px 22px;
-    position: relative;
-    left: -15px;
-    width: 40%;
-    background-color: rgba(#ffff00, 0.20);
+}
 
+
+.b-city-form {
+  display: flex;
+  flex-direction: column;
+  margin: 34px 0px;
+  padding: 15px 22px;
+  position: relative;
+  left: -15px;
+  width: 40%;
+  background-color: rgba(#ffff00, 0.20);
+
+  font-size: 1em;
+
+  > div {
+    margin-bottom: 17px;
+  }
+
+  .label {
     font-size: 1em;
+    line-height: 1.8;
+  }
 
-    > div {
-      margin-bottom: 17px;
-    }
+  .uk-title input {
+    outline: none;
+    border: none;
+    box-shadow: inset 0 3px 3px -2px #d4d4d4, 0 0 0 1px #cbcbcb;
+    width: 90%;
+    max-width: 600px;
+    padding: .2em .4em;
+    font-size: 200%;
+    height: 1.3em;
+    font-weight: bold;
+  }
 
-    .label {
-      font-size: 1em;
-      line-height: 1.8;
-    }
-
-    .uk-title input {
-      outline: none;
-      border: none;
-      box-shadow: inset 0 3px 3px -2px #d4d4d4, 0 0 0 1px #cbcbcb;
-      width: 90%;
-      max-width: 600px;
-      padding: .2em .4em;
-      font-size: 200%;
-      height: 1.3em;
-      font-weight: bold;
-    }
-
-    .ru-title input, .en-title input, .site_link input {
-      outline: none;
-      border: none;
-      box-shadow: inset 0 3px 3px -2px #d4d4d4, 0 0 0 1px #cbcbcb;
-      width: 91%;
-      max-width: 600px;
-      padding: .4em .5em;
-      font-size: 105%;
-      height: 1.3em;
-    }
-
+  .ru-title input, .en-title input, .site_link input {
+    outline: none;
+    border: none;
+    box-shadow: inset 0 3px 3px -2px #d4d4d4, 0 0 0 1px #cbcbcb;
+    width: 91%;
+    max-width: 600px;
+    padding: .4em .5em;
+    font-size: 105%;
+    height: 1.3em;
   }
 }
+
