@@ -27,6 +27,10 @@ group :test do
   gem 'shoulda-matchers', require: false
 end
 
+group :development do
+  gem 'meta_request'
+end
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 # Use ActiveModel has_secure_password

@@ -1,7 +1,7 @@
 .b-city
   .title
     = link_to city.uk_title, city_path(city)
-  .rating
-    456
   .site_link
-    = link_to city.link.gsub('http://', '').chomp('/'), city.link
+    = link_to city.link.gsub('http://www.', '').chomp('/'), city.link
+  .rating
+    0
