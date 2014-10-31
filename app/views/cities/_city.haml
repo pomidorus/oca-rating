@@ -3,6 +3,5 @@
     = link_to city.uk_title, city_path(city)
   .rating
     456
-
-  -#.website
-  -#  = link_to "#{city.lgs_link}", "#{city.lgs_link}"
+  .site_link
+    = link_to city.link.gsub('http://', '').chomp('/'), city.link
