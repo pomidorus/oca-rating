@@ -2,6 +2,6 @@
   .title
     = link_to city.uk_title, city_path(city)
   .site_link
-    = link_to city.link.gsub('http://www.', '').chomp('/'), city.link
+    = link_to city.link_decorator, city.link
   .rating
     0
