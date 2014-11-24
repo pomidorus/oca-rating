@@ -36,19 +36,19 @@
             border: none;
           }
         }
-        &:hover {
-          &:not(.active) {
-            color: darken($main-color, 30%);
-            .label {
-              border-bottom: 1px dotted darken($main-color, 30%);
-            }
-          }
-        }
         &.disabled{
           color: #eee;
           cursor: inherit;
           .label {
             border: none;
+          }
+        }
+        &:hover:not(.disabled) {
+          &:not(.active) {
+            color: darken($main-color, 30%);
+            .label {
+              border-bottom: 1px dotted darken($main-color, 30%);
+            }
           }
         }
       }
