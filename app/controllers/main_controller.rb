@@ -1,6 +1,8 @@
 class MainController < ApplicationController
   def index
     @regions ||= Region.all
+
     @cities ||= City.all
-  end
+    @cities = City.joins(:region).where('regions.uk_name = ?', params[:region]) if params[:region].present?
+    end
 end

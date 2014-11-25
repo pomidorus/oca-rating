@@ -15,9 +15,10 @@
 
   %section.l-cities
     %nav.b-filter-region
-      %button.filter.active
-        %span.label
-          Все области
+      %button.filter{class: "#{filter_all_active}"}
+        = link_to root_path do
+          %span.label
+            Все области
       = render @regions
 
     %section.b-cities

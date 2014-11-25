@@ -1,3 +1,4 @@
-%button.filter{class: "#{filter_status(region)}"}
-  %span.label
-    = region.uk_name
+%button.filter{class: "#{filter_status(region)} #{filter_active(region)}"}
+  = link_to root_path(region: region.uk_name) do
+    %span.label
+      = region.uk_name
