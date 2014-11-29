@@ -1,5 +1,28 @@
 %article.l-city-show
   = render 'main/header'
 
-  .l-city-header
-    %h1 fsdf
+  .l-city
+    .logo
+      = image_tag 'dubno2_s.gif', width: '115px'
+    .city-info
+      .l-city-header
+        %h1.name
+          = @city.uk_title
+      .l-city-rating
+        %p= '37 баллов из 100'
+        %p= '7-е место по Украине'
+        %p=  "3-е место в #{@city.region_name} области"
+
+  .l-city-rating
+    .row
+      .name
+        Муниципальный сайт:
+      .dot.true
+      .value
+        = link_to @city.link_decorator, @city.link
+    - 10.times do
+      .row
+        .name
+          Реестр улиц:
+        .dot.false
+        .value

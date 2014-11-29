@@ -5,8 +5,12 @@ class City < ActiveRecord::Base
     if link
       link.gsub('http://www.', '').chomp('/')
     else
-      "#{uk_title} has no web link"
+      "---"
     end
+  end
+
+  def region_name
+    region.uk_name
   end
 end
 
