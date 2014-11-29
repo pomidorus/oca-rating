@@ -9,6 +9,9 @@
       %li
         = link_to 'Города', cities_path
 
+  %section.l-stat
+    = "#{@rating} баллов из #{@rating_all}"
+
   %section.l-cities
     %nav.b-filter-region
       %button.filter{class: "#{filter_all_active}"}

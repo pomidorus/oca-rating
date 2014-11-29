@@ -4,5 +4,12 @@ class MainController < ApplicationController
 
     @cities ||= City.all
     @cities = City.joins(:region).where('regions.uk_name = ?', params[:region]) if params[:region].present?
+
+    @rating = 0
+    @cities.each do |city|
+      @rating += CityRating.calculate city
     end
+
+    @rating_all = CityRating.total_calculate @cities
+  end
 end

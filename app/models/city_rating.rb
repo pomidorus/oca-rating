@@ -9,4 +9,15 @@ class CityRating
     end
     count
   end
+
+  def self.total_calculate cities
+    count = 0
+    cities.each do |city|
+      RATING_ATTRIBUTES.each do |attr|
+        count += 10
+      end
+    end
+    count
+  end
+
 end
