@@ -12,5 +12,9 @@ class City < ActiveRecord::Base
   def region_name
     region.uk_name
   end
+
+  def link?
+    not link.blank?
+  end
 end
 

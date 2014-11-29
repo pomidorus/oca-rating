@@ -59,12 +59,12 @@
     .b-cities {
       margin: 16px 7px;
       .b-city {
-        padding: 8px 0px;
+        padding: 19px 0px;
         display: flex;
         align-items: center;
 
         > div {
-          width: 300px;
+          margin-right: 5px;
         }
         .title {
           margin-right: 4px;
@@ -76,10 +76,11 @@
           }
         }
         .rating {
+          margin-left: 35px;
           position: relative;
           top: 1px;
-          font-size: 0.7em;
-          color: #ccc;
+          font-size: 1em;
+          color: #444;
         }
       }
     }
