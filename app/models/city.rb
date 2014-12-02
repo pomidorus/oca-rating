@@ -1,6 +1,8 @@
 class City < ActiveRecord::Base
   belongs_to :region
 
+  default_scope {order(uk_title: :asc)}
+
   def link_decorator
     if link
       link.gsub('http://www.', '').chomp('/')
