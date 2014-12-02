@@ -3,7 +3,7 @@
     = link_to 'Доступность', root_path
   %nav
     %ul
-      %li{class: "#{current_page?('/cities') ? 'active': ''}"}
-        = link_to_unless(current_page?('/cities'), 'Города', cities_path)
-      %li{class: "#{current_page?('/regions') ? 'active': ''}"}
-        = link_to_unless(current_page?('/regions'), 'Области', regions_path)
+      %li{class: "#{current_page?('/admin') ? 'active': ''}"}
+        = link_to_unless(current_page?('/admin'), 'Города', admin_root_path)
+      %li{class: "#{current_page?('/admin/regions') ? 'active': ''}"}
+        = link_to_unless(current_page?('/admin/regions'), 'Области', admin_regions_path)

@@ -1,7 +1,7 @@
 .b-region{class: "#{empty?(region)}"}
   .uk_name
     %span
-      = link_to region.uk_name, edit_region_path(region)
+      = link_to region.uk_name, edit_admin_region_path(region)
   .ru_name
     %span
       = region.uk_name

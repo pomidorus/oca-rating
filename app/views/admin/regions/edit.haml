@@ -1,0 +1,8 @@
+= render partial: 'admin/header'
+
+%article.l-regions-edit
+  = form_for admin_region_path(@region), html: {class: 'b-edit-form'} do |f|
+    .uk_name
+      = f.text_field :uk_name
+    .action-save
+      = f.submit 'Сохранить'
