@@ -31,6 +31,8 @@ group :development do
   gem 'meta_request'
 end
 
+gem 'active_model_serializers'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 # Use ActiveModel has_secure_password

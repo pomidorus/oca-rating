@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  namespace :api, defaults: {format: 'json'} do
+    scope module: :v1 do
+      resources :regions, only: [:index]
+    end
+  end
+
   namespace :admin do
     resources :regions
     root 'admin#index'
