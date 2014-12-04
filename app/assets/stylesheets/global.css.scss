@@ -2,3 +2,19 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+
+  &.true {
+    background: #A0D4A4;
+  }
+
+  &.false {
+    width: 10px;
+    height: 10px;
+    border: 1px rgba(darkgray, 0.5) solid;
+  }
+}
