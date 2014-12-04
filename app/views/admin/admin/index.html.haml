@@ -1,1 +1,12 @@
-= render 'cities/index'
+= render partial: 'admin/header'
+
+%article.l-cities-index
+  %header
+    %h1
+      Города
+    .new-city
+      %button
+        = link_to 'Создать город', new_city_path
+
+  %section.b-cities
+    = render partial: 'cities/city_admin', collection: @cities, as: :city

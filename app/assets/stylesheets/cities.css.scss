@@ -61,11 +61,15 @@
 }
 
 .l-city-new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0 8.3%;
   header {
     margin: 34px 0px;
+    margin-bottom: 0px;
     width: 40%;
-    text-align: center;
     h2 {
       margin: 0 0;
     }
@@ -78,13 +82,13 @@
   header {
     display: flex;
     align-items: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 53px;
+    margin-bottom: 48px;
     h1 {
       margin: 0px 0px;
     }
     .new-city {
-      margin-left: 22px;
+      margin-left: 56px;
       button {
         display: inline-block;
         color: #444;
@@ -120,7 +124,7 @@
       display: flex;
 
       div {
-        margin-right: 38px;
+        width: 154px;
         a {
           text-decoration: none;
           color: inherit;
@@ -144,12 +148,8 @@
   display: flex;
   flex-direction: column;
   margin: 34px 0px;
-  padding: 15px 22px;
-  position: relative;
-  left: -15px;
-  width: 40%;
+  padding: 15px 22px 7px 37px;
   background-color: rgba(#ffff00, 0.20);
-
   font-size: 1em;
 
   > div {
