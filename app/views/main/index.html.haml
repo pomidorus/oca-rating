@@ -1,16 +1,11 @@
 %article.l-main-index
   = render 'header'
 
-  -#%nav.l-main-menu
-  -#  %ul
-  -#    %li
-  -#      %a{href: '/'}
-  -#        Области
-  -#    %li
-  -#      = link_to 'Города', cities_path
-
   %section.l-stat
-    = "#{@rating} баллов из #{@rating_all}"
+    %p
+      = "Количество городов: #{@cities.length}"
+    %p
+      = "Общий рейтинг: #{@rating} баллов из #{@rating_all}"
 
   %section.l-cities
     %nav.b-filter-region

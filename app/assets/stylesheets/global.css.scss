@@ -4,17 +4,20 @@ a {
 }
 
 .dot {
-  width: 11px;
-  height: 11px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
 
   &.true {
     background: #A0D4A4;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
   }
 
   &.false {
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
     border: 1px rgba(darkgray, 0.5) solid;
   }
 }
