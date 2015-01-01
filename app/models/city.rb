@@ -18,5 +18,14 @@ class City < ActiveRecord::Base
   def link?
     not link.blank?
   end
+
+  def self.to_csv
+    CSV.generate :col_sep => "\t"  do |csv|
+      csv << column_names
+      all.each do |city|
+        csv << city.attributes.values_at(*column_names)
+      end
+    end
+  end
 end
 

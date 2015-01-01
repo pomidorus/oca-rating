@@ -7,6 +7,9 @@
     .new-city
       %button
         = link_to 'Создать город', new_city_path
+    .export-city
+      %button
+        = link_to 'Експорт в цсв', admin_data_export_path(format: 'csv')
 
   %section.b-cities
     = render partial: 'cities/city_admin', collection: @cities, as: :city
