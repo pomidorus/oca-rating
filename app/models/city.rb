@@ -28,5 +28,16 @@ class City < ActiveRecord::Base
       end
     end
   end
+
+  def self.import file
+    CSV.foreach(file.path, headers: true, :col_sep => "\t") do |row|
+      city = where('uk_title = ?', row['uk_title']).first || new
+      city.uk_title = row['uk_title']
+      city.link = row['link']
+      region = Region.where('uk_name = ?', row['region']).first
+      city.region = region
+      city.save!
+    end
+  end
 end
 

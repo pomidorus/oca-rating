@@ -7,5 +7,7 @@ class Admin::DataController < ApplicationController
   end
 
   def import
+    City.import(params[:file]) if params[:file].present?
+    redirect_to admin_root_url, notice: 'Города импортированы'
   end
 end

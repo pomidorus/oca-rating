@@ -13,3 +13,10 @@
 
   %section.b-cities
     = render partial: 'cities/city_admin', collection: @cities, as: :city
+
+  .l-import-cities
+    %h2
+      Импорт городов
+    = form_tag admin_data_import_path, multipart: true do
+      = file_field_tag :file
+      = submit_tag 'Импорт городов'
