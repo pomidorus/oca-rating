@@ -20,10 +20,11 @@ class City < ActiveRecord::Base
   end
 
   def self.to_csv
+    cn = [ 'uk_title', 'link', 'region']
     CSV.generate :col_sep => "\t"  do |csv|
-      csv << column_names
+      csv << cn
       all.each do |city|
-        csv << city.attributes.values_at(*column_names)
+        csv << [city.uk_title, city.link, city.region_name]
       end
     end
   end
