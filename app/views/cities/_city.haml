@@ -1,9 +1,9 @@
 .b-city
+  .rating
+    = @city_rating.position_of city
   .title
     = link_to city.uk_title, city_path(city)
   .site_link
-    .dot{title: 'Муниципальный сайт', class: "#{city.link?}"}= '10'
+    .dot{title: 'Муниципальный сайт', class: "#{city.link?}"}
   .street_reestr
-    .dot.false{title: 'Реестр улиц'}
-  .rating
-    = CityRating.calculate city
+    .dot.false{title: 'Реестр названий улиц'}
