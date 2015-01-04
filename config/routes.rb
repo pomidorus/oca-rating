@@ -19,6 +19,8 @@ Rails.application.routes.draw do
     root 'admin#index'
   end
 
+  resources :regions
+
   resources :cities do
     resource :region, only: [:show]
   end
