@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+
+  resource :datasets, only: [] do
+    get 'local_site'
+  end
+
   namespace :api, defaults: {format: 'json'} do
     scope module: :v1 do
       resources :regions, only: [:index]

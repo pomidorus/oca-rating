@@ -1,13 +1,8 @@
 %article.l-main-index
   = render 'header'
 
-  -#%section.l-stat
-  -#  %p
-  -#    = "Количество городов: #{@cities.length}"
-  -#  %p
-  -#    = "Общий рейтинг: #{@rating} баллов из #{@rating_all}"
-
   %section.l-cities
+    -#Фильтр по областям
     %nav.b-filter-region
       %button.filter{class: "#{filter_all_active}"}
         = link_to root_path do
@@ -15,5 +10,14 @@
             Все области
       = render @regions
 
+    %nav.b-datasets
+      .dataset
+        = link_to 'Муниципальный сайт', local_site_datasets_path
+      .dataset
+        = link_to 'Финансовые декларации', root_path
+      .dataset
+        = link_to 'Реестр улиц', root_path
+
+    -#Список городов
     %section.b-cities
       = render @cities

@@ -1,0 +1,8 @@
+%article.l-local-site
+  = render 'main/header'
+  %h2
+    Муниципальный сайт
+
+  -#Список городов в контексте муниципального сайта
+  %section.b-cities
+    = render partial: 'cities/city_local_site', collection: @cities
