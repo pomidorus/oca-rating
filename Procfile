@@ -1,1 +1,1 @@
-web: bundle exec puma -e production -p 80 -S ~/puma -C config/puma.rb
+web: bundle exec puma -e production -p 4444 -S ~/puma -C config/puma.rb
