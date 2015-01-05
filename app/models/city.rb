@@ -5,7 +5,7 @@ class City < ActiveRecord::Base
 
   def link_decorator
     if link
-      link.gsub('http://www.', '').chomp('/')
+      link.gsub('http://', '').gsub('www.', '').chomp('/')
     else
       "---"
     end

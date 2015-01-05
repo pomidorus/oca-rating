@@ -1,7 +1,5 @@
 .b-city
   .title
     = link_to city.uk_title, edit_city_path(city)
-  .title_ru
-    = city.ru_title
-  .title_en
-    = city.en_title
+  .local_site
+    = link_to city.link_decorator, city.link
