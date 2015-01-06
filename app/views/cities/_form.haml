@@ -1,18 +1,19 @@
-= form_for @city, html: {class: 'b-city-form'} do |f|
-  .uk-title
-    .label
-      = f.label :uk_title, 'Назва'
-    = f.text_field :uk_title
-  -#.region
-  -#  = select('city', 'region_id', Region.all.collect {|r| [ r.uk_name, r.id]}, :selected => @city.region_id)
-  -#.site_link
-  -#  .label
-  -#    = f.label :link, 'Сайт горсовета'
-  -#  = f.text_field :link
-  -#.asset_disclosure_link
-  -#  .label
-  -#    = f.label :asset_disclosure, 'Финансовые декларации'
-  -#  = f.text_field :asset_disclosure
+.l-form
+  = form_for @city, html: {class: 'b-city-form'} do |f|
+    .uk-title
+      .label
+        = f.label :uk_title, 'Назва'
+      = f.text_field :uk_title
+    .region
+      = select('city', 'region_id', Region.all.collect {|r| [ r.uk_name, r.id]}, :selected => @city.region_id)
+    .site_link
+      .label
+        = f.label :link, 'Сайт горсовета (ссылка)'
+      = f.text_field :link
+    .asset_disclosure_link
+      .label
+        = f.label :asset_disclosure, 'Финансовые декларации (ссылка)'
+      = f.text_field :asset_disclosure
 
-  .action-save
-    = f.submit 'Сохранить'
+    .action-save
+      = f.submit 'Сохранить'

@@ -51,13 +51,10 @@
 .l-city-new {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin: 0 8.3%;
   header {
-    margin: 34px 0px;
-    margin-bottom: 0px;
-    width: 40%;
+    margin: 34px 16px;
+    margin-bottom: 16px;
     h2 {
       margin: 0 0;
     }
@@ -120,13 +117,15 @@
 }
 
 
+.l-form {
+  width: 600px;
+}
+
 .b-city-form {
   display: flex;
   flex-direction: column;
-  margin: 34px 0px;
-  padding: 15px 22px 7px 37px;
+  padding: 5px 22px 7px 18px;
   background-color: rgba(#ffff00, 0.20);
-  font-size: 1em;
 
   > div {
     margin-bottom: 17px;
@@ -141,8 +140,7 @@
     outline: none;
     border: none;
     box-shadow: inset 0 3px 3px -2px #d4d4d4, 0 0 0 1px #cbcbcb;
-    width: 90%;
-    max-width: 600px;
+    width: 95%;
     padding: .2em .4em;
     font-size: 200%;
     height: 1.3em;
@@ -156,8 +154,7 @@
     outline: none;
     border: none;
     box-shadow: inset 0 3px 3px -2px #d4d4d4, 0 0 0 1px #cbcbcb;
-    width: 91%;
-    max-width: 600px;
+    width: 97%;
     padding: .4em .5em;
     font-size: 105%;
     height: 1.3em;
