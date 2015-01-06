@@ -19,7 +19,7 @@
         Муниципальный сайт:
       .dot.true
       .value
-        = link_to @city.link_decorator, @city.link
+        = link_to link_decorator(@city.link), @city.link
     - 10.times do
       .row
         .name

@@ -5,7 +5,7 @@
     = link_to city.uk_title, city_path(city)
   .site_link
     .dot{title: 'Муниципальный сайт', class: "#{city.link?}"}
-  .street_reestr
-    .dot.false{title: 'Финансовые декларации'}
+  .asset_disclosure
+    .dot.false{title: 'Финансовые декларации', class: "#{city.asset_disclosure?}"}
   .street_reestr
     .dot.false{title: 'Реестр названий улиц'}

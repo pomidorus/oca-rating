@@ -2,4 +2,6 @@
   .title
     = link_to city.uk_title, edit_city_path(city)
   .local_site
-    = link_to city.link_decorator, city.link
+    = link_to link_decorator(city.link), city.link
+  .asset_disclosure_link
+    = link_to link_decorator(city.asset_disclosure), city.asset_disclosure

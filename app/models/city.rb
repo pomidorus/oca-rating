@@ -19,20 +19,16 @@ class City < ActiveRecord::Base
 
   default_scope {order(uk_title: :asc)}
 
-  def link_decorator
-    if link
-      link.gsub('http://', '').gsub('www.', '').chomp('/')
-    else
-      "---"
-    end
-  end
-
   def region_name
     region.uk_name
   end
 
   def link?
     not link.blank?
+  end
+
+  def asset_disclosure?
+    not asset_disclosure.blank?
   end
 
   def self.to_csv
