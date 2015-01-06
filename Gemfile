@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.3'
 
+gem 'annotate', '~> 2.6.5'
 gem 'active_model_serializers'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'foreman'
