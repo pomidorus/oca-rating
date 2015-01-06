@@ -1,5 +1,5 @@
 class CityRating
-  RATING_ATTRIBUTES = %w{link?}
+  RATING_ATTRIBUTES = %w{link? asset_disclosure?}
 
   def initialize cities
     @cities = cities
