@@ -6,6 +6,7 @@
   .site_link
     .dot{title: 'Муниципальный сайт', class: "#{city.link?}"}
   .asset_disclosure
-    .dot.false{title: 'Финансовые декларации', class: "#{city.asset_disclosure?}"}
+    = link_to city.asset_disclosure do
+      .dot{title: 'Финансовые декларации', class: "#{city.asset_disclosure?}"}
   .street_reestr
     .dot.false{title: 'Реестр названий улиц'}
