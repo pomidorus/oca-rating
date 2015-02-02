@@ -5,7 +5,7 @@
         = f.label :uk_title, 'Назва'
       = f.text_field :uk_title
     .region
-      = select('city', 'region_id', Region.all.collect {|r| [ r.uk_name, r.id]}, :selected => @city.region_id)
+      = select('city', 'region_id', Region.all.collect {|r| [r.uk_name, r.id]}, :selected => @city.region_id)
     .site_link
       .label
         = f.label :link, 'Сайт горсовета (ссылка)'
@@ -14,6 +14,11 @@
       .label
         = f.label :asset_disclosure, 'Финансовые декларации (ссылка)'
       = f.text_field :asset_disclosure
+    .budget_url
+      = f.fields_for :budget do |budget_fields|
+        .label
+          = budget_fields.label :url, 'Бюджет (ссылка)'
+        = budget_fields.text_field :url
 
     .action-save
       = f.submit 'Сохранить'

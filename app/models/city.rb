@@ -16,19 +16,33 @@
 
 class City < ActiveRecord::Base
   belongs_to :region
+  has_one :budget
+  accepts_nested_attributes_for :budget, update_only: true
 
   default_scope {order(uk_title: :asc)}
 
-  def region_name
-    region.uk_name
+  def budget_url
+    budget.url if budget.present?
   end
 
+  def region_name
+    region.uk_name if budget.present?
+  end
+
+  # проверка на наличие данных
+  # сайт
   def link?
     not link.blank?
   end
 
+  # декларации
   def asset_disclosure?
     not asset_disclosure.blank?
+  end
+
+  # бюджет
+  def budget?
+    not budget_url.blank?
   end
 
   def self.to_csv

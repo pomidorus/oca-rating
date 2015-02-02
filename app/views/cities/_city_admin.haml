@@ -1,7 +1,9 @@
 .b-city
   .title
     = link_to city.uk_title, edit_city_path(city)
-  .local_site
+  .local_site_url
     = link_to link_decorator(city.link), city.link
-  .asset_disclosure_link
+  .asset_disclosure_url
     = link_to link_decorator(city.asset_disclosure), city.asset_disclosure
+  .budget_url
+    = link_to link_decorator(city.budget_url), city.budget_url

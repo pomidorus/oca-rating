@@ -3,6 +3,7 @@ class CitiesController < ApplicationController
 
   def new
     @city = City.new
+    @city.build_budget
   end
 
   def create
@@ -20,6 +21,7 @@ class CitiesController < ApplicationController
 
   def edit
     @city = City.find(params[:id])
+    @city.build_budget if @city.budget.nil?
   end
 
   def update
@@ -33,7 +35,7 @@ class CitiesController < ApplicationController
   private
 
   def city_params
-    params.require(:city).permit(:uk_title, :ru_title, :en_title, :region_id, :link, :asset_disclosure)
+    params.require(:city).permit(:uk_title, :region_id, :link, :asset_disclosure, budget_attributes: [:id, :url])
   end
 
 end

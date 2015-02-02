@@ -8,5 +8,8 @@
   .asset_disclosure
     = link_to city.asset_disclosure do
       .dot{title: 'Финансовые декларации', class: "#{city.asset_disclosure?}"}
+  .budget
+    = link_to city.budget_url do
+      .dot{title: 'Бюджет', class: "#{city.budget?}"}
   .street_reestr
     .dot.false{title: 'Реестр названий улиц'}
