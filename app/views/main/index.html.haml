@@ -19,5 +19,20 @@
         = link_to 'Реестр улиц', root_path
 
     -#Список городов
-    %section.b-cities
-      = render @cities
+    %section.s-cities
+      %section.b-cities
+        = render @cities
+      %section.s-current-city
+        %article.a-current-city
+          .title
+            Донецк
+          .categories
+            .local_site
+              .dot.true
+              сайт горсовета
+            .local_site
+              .dot.false
+              финансовые декларации
+            .local_site
+              .dot.true
+              бюджет

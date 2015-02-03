@@ -6,6 +6,7 @@ $header-color: darken($main-color, 50);
 $text-color: lighten($main-color, 25);
 $active-color: darken($main-color, 30);
 $active-background: lighten($main-color, 25);
+$box-background: lighten($main-color, 17);
 $hover-background: lighten($header-color, 10);
 
 .pretty-button {
