@@ -2,7 +2,7 @@
   .rating
     = @city_rating.position_of city
   .title
-    = link_to city.uk_title, city_path(city)
+    = link_to_if city.link?, city.uk_title, city.link
   .site_link
     .dot{title: 'Муниципальный сайт', class: "#{city.link?}"}
   .asset_disclosure
@@ -11,5 +11,25 @@
   .budget
     = link_to city.budget_url do
       .dot{title: 'Бюджет', class: "#{city.budget?}"}
+  .street_reestr
+    .dot.false{title: 'Реестр названий улиц'}
+  .street_reestr
+    .dot.false{title: 'Реестр названий улиц'}
+  .street_reestr
+    .dot.false{title: 'Реестр названий улиц'}
+  .street_reestr
+    .dot.false{title: 'Реестр названий улиц'}
+  .street_reestr
+    .dot.false{title: 'Реестр названий улиц'}
+  .street_reestr
+    .dot.false{title: 'Реестр названий улиц'}
+  .street_reestr
+    .dot.false{title: 'Реестр названий улиц'}
+  .street_reestr
+    .dot.false{title: 'Реестр названий улиц'}
+  .street_reestr
+    .dot.false{title: 'Реестр названий улиц'}
+  .street_reestr
+    .dot.false{title: 'Реестр названий улиц'}
   .street_reestr
     .dot.false{title: 'Реестр названий улиц'}
