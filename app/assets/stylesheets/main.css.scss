@@ -13,6 +13,7 @@
     color: #444;
     &.active {
       background-color: #36caff;
+      border-radius: 4px;
       .label {
         border: none;
       }
@@ -92,8 +93,15 @@
       font-weight: bold;
       margin-right: 16px;
       position: relative;
-      font-size: 1em;
+      font-size: 15px;
       color: #444;
+      background-color: #eee;
+      text-align: center;
+      border-radius: 50px;
+      padding: 3px 2px;
+      position: relative;
+      left: -25px;
+      box-shadow: 0px 1px 3px 0px #bbb;
     }
     .title {
       margin-right: 4px;
@@ -141,6 +149,13 @@
       border-radius: 20px;
       padding: 3px 3px;
     }
+    a:hover {
+      color: darken($main-color, 30%);
+    }
+    &.active {
+      color: darken($main-color, 30%);
+    }
+
   }
 }
 

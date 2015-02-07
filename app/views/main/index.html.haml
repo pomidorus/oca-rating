@@ -5,15 +5,15 @@
   %section.l-cities.s-cities
     %section.b-datasets
       %nav
-        .dataset
-          = link_to 'Муниципальный сайт', local_site_datasets_path
+        .dataset{data: {category: 'local_site'}}
+          = link_to 'Муниципальный сайт', root_path
           %span.value
             16%
-        .dataset
+        .dataset{data: {category: 'asset_disclosure'}}
           = link_to 'Финансовые декларации', root_path
           %span.value
             18%
-        .dataset
+        .dataset{data: {category: 'budget'}}
           = link_to 'Бюджет', root_path
           %span.value
             18%

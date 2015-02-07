@@ -8,6 +8,10 @@ a {
   height: 15px;
   border-radius: 50%;
 
+  &.passive {
+    opacity: 0.25;
+  }
+
   &.true {
     background: #E7E271;
     font-size: 12px;
