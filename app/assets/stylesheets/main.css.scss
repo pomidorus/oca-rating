@@ -1,4 +1,5 @@
 @import "values";
+@import "global";
 
 .b-filter-region {
   padding: 30px 8.3% 16px 8.3%;
@@ -74,12 +75,21 @@
 .b-cities {
   margin: 20px 0px 20px 0px;
   .b-city {
-    display: flex;
     padding: 19px 0px 19px 13px;
     margin: 3px 0px 3px 0px;
-    align-items: center;
     background-color: #ffffff;
     border-radius: 4px;
+
+    &.short {
+      .categories_detail {
+        display: none;
+      }
+    }
+    &.full {
+      .dot {
+        opacity: 0.25;
+      }
+    }
 
     &:hover {
       background-color: $active-background;
@@ -110,6 +120,64 @@
       a {
         color: darken(#36caff, 20%);
         border-bottom: 1px solid rgba(darken(#36caff, 20%), 0.15);
+      }
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      > div {
+        margin-right: 9px;
+      }
+    }
+
+    .categories {
+      display: flex;
+      > div {
+        margin-right: 9px;
+      }
+    }
+
+    .categories_detail {
+      margin-left: 236px;
+      margin-top: 13px;
+      display: flex;
+
+      > div {
+        margin-right: 10px;
+        position: relative;
+        left: -3px;
+      }
+
+      > div.true:before {
+        content: '';
+        display: block;
+        float: left;
+        position: relative;
+        top: 3px;
+        margin-right: 10px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #E7E271;
+      }
+
+      > div.false:before {
+        content: '';
+        display: block;
+        float: left;
+        position: relative;
+        top: 3px;
+        margin-right: 10px;
+        border-radius: 50%;
+        width: 14px;
+        height: 14px;
+        border: 1px rgba(darkgray, 0.5) solid;
+      }
+
+      a {
+        font-size: 14px;
+        border-bottom: 1px solid rgba(#999, 0.75);
       }
     }
   }

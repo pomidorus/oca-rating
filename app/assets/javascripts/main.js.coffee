@@ -22,5 +22,10 @@ $ ->
       $('.dot[data-category='+category+']').removeClass('passive')
   )
 
-
+  titles = $('.b-city .title a')
+  titles.on('click', (event) ->
+    event.preventDefault()
+    $(this).closest(".b-city").toggleClass('short')
+    $(this).closest(".b-city").toggleClass('full')
+  )
 
