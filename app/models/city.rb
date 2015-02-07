@@ -45,16 +45,18 @@ class City < ActiveRecord::Base
     not budget_url.blank?
   end
 
+  # экспорт в цсв файл
   def self.to_csv
-    cn = [ 'uk_title', 'link', 'region']
+    cn = %w(uk_title link region asset_disclosure_url)
     CSV.generate :col_sep => "\t"  do |csv|
       csv << cn
       all.each do |city|
-        csv << [city.uk_title, city.link, city.region_name]
+        csv << [city.uk_title, city.link, city.region_name, city.asset_disclosure]
       end
     end
   end
 
+  # импорт данных из файла
   def self.import file
     CSV.foreach(file.path, headers: true, :col_sep => "\t") do |row|
       city = where('uk_title = ?', row['uk_title']).first || new
