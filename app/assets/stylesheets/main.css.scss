@@ -84,10 +84,24 @@
       .categories_detail {
         display: none;
       }
+      a:after {
+        content: '\2193';
+        margin-left: 3px;
+        color: #999;
+        position: relative;
+        top: -2px;
+      }
     }
     &.full {
       .dot {
         opacity: 0.25;
+      }
+      .title a:after {
+        content: '\2191';
+        margin-left: 3px;
+        color: #999;
+        position: relative;
+        top: -2px;
       }
     }
 
@@ -119,7 +133,7 @@
 
       a {
         color: darken(#36caff, 20%);
-        border-bottom: 1px solid rgba(darken(#36caff, 20%), 0.15);
+        border-bottom: 1px dashed rgba(darken(#36caff, 20%), 0.15);
       }
     }
 
