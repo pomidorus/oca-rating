@@ -1,3 +1,5 @@
+@import "values";
+
 a {
   text-decoration: none;
   color: inherit;
@@ -13,7 +15,7 @@ a {
   }
 
   &.true {
-    background: #E7E271;
+    background: $dot-background;
     font-size: 12px;
     font-weight: bold;
     color: #ffffff;

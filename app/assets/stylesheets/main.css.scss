@@ -41,7 +41,7 @@
 }
 
 .l-main-index {
-  header {
+  > header {
     padding: 0 8.3%;
     padding-bottom: 15px;
     background-color: #fefefe;
@@ -79,6 +79,32 @@
     margin: 3px 0px 3px 0px;
     background-color: #ffffff;
     border-radius: 4px;
+
+    &.first {
+      border: 4px solid $dot-background;
+      padding: 0px 0px 19px 0px;
+
+      header {
+        padding: 2px 0px 4px 4px;
+        margin: 0px 0px 19px 0px;
+        background-color: $dot-background;
+        color: #fff;
+        text-shadow: 1px 1px #aaa;
+        font-size: 12px;
+
+        span {
+          margin-left: 34px;
+        }
+      }
+
+      .rating {
+        left: -16px;
+      }
+
+      .title {
+        margin-left: 6px;
+      }
+    }
 
     &.short {
       .categories_detail {
