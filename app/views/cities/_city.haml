@@ -8,11 +8,9 @@
       .site_link
         .dot{title: 'Муниципальный сайт', class: "#{city.link?}", data: {category: 'local_site'}}
       .asset_disclosure
-        = link_to city.asset_disclosure do
-          .dot{title: 'Финансовые декларации', class: "#{city.asset_disclosure?}", data: {category: 'asset_disclosure'}}
+        .dot{title: 'Финансовые декларации', class: "#{city.asset_disclosure?}", data: {category: 'asset_disclosure'}}
       .budget
-        = link_to city.budget_url do
-          .dot{title: 'Бюджет', class: "#{city.budget?}"}
+        .dot{title: 'Бюджет', class: "#{city.budget?}"}
       .street_reestr
         .dot.false{title: 'Реестр названий улиц'}
       .street_reestr
@@ -53,3 +51,5 @@
       = link_to 'муниципальный сайт', city.link
     .asset_disclosure_url
       = city.asset_disclosure? ? link_to('финансовые декларации', city.asset_disclosure) : ''
+    .budget_url
+      = city.budget? ? link_to('бюджет', city.budget_url) : ''
