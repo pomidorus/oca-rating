@@ -11,5 +11,7 @@ class MainController < ApplicationController
 
     @city_rating = CityRating.new @cities
     @cities.sort! {|x,y| @city_rating.position_of(x) <=> @city_rating.position_of(y)}
+
+    @budget_percent = (Budget.all.count*100) / City.all.count
   end
 end
