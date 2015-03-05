@@ -16,6 +16,9 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
+gem 'spyme'
+gem 'nondestructive_migrations'
+
 group :development, :test do
   gem 'meta_request'
   gem 'quiet_assets'
@@ -26,7 +29,6 @@ end
 group :test do
   gem 'shoulda-matchers', require: false
 end
-
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
