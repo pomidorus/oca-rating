@@ -42,6 +42,8 @@
 
 .l-main-index {
   > header {
+    display: flex;
+    align-items: center;
     padding: 0 8.3%;
     padding-bottom: 15px;
     background-color: #fefefe;
@@ -49,7 +51,7 @@
     color: #444;
     h1 {
       margin: 0px 0px;
-      padding-top: 21px;
+      padding: 9px 20px 0px 0px;
     }
     p {
       margin: 7px 0px 0px 0px;

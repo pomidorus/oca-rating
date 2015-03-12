@@ -1,4 +1,5 @@
 @import "values";
+@import url(http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption);
 
 a {
   text-decoration: none;
@@ -26,4 +27,13 @@ a {
     height: 14px;
     border: 1px rgba(darkgray, 0.5) solid;
   }
+}
+
+h1, h2 {
+  font-family: 'PT Sans Caption', sans-serif;
+  font-weight: normal;
+}
+
+p, span, a {
+  font-family: 'PT Sans', sans-serif;
 }

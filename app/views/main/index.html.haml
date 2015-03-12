@@ -1,12 +1,11 @@
-= @current_location.inspect
-
 %section.l-main-index
   = render 'header'
   = render 'regions_filter'
 
   %section.l-cities
     %header
-      = @region_header
+      %h2
+        = @region_header
     .s-cities
       = render 'datasets'
       %section.b-cities
