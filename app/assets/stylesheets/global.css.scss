@@ -27,11 +27,18 @@ a {
     height: 14px;
     border: 1px rgba(darkgray, 0.5) solid;
   }
+
+  &.nil {
+    width: 3px;
+    height: 3px;
+    border: 1px rgba(darkgray, 0.4) solid;
+  }
 }
 
 h1, h2 {
   font-family: 'PT Sans Caption', sans-serif;
   font-weight: normal;
+  color: #444;
 }
 
 p, span, a {
