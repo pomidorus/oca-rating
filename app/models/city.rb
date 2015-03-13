@@ -52,6 +52,14 @@ class City < ActiveRecord::Base
     not budget_url.blank?
   end
 
+  def self.sites
+    City.all.map {|c| c.site}
+  end
+
+  def self.links_count
+    sites.compact.count
+  end
+
   # экспорт в цсв файл
   def self.to_csv
     cn = %w(uk_title link region asset_disclosure_url)
