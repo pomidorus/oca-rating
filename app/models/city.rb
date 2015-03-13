@@ -2,16 +2,15 @@
 #
 # Table name: cities
 #
-#  id               :integer          not null, primary key
-#  uk_title         :string(255)
-#  lgs_link         :string(255)
-#  created_at       :datetime
-#  updated_at       :datetime
-#  ru_title         :string(255)
-#  en_title         :string(255)
-#  region_id        :integer
-#  link             :string(255)
-#  asset_disclosure :string(255)
+#  id         :integer          not null, primary key
+#  uk_title   :string(255)
+#  lgs_link   :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#  ru_title   :string(255)
+#  en_title   :string(255)
+#  region_id  :integer
+#  link       :string(255)
 #
 
 class City < ActiveRecord::Base
@@ -28,12 +27,16 @@ class City < ActiveRecord::Base
 
   default_scope {order(uk_title: :asc)}
 
+  def asset_disclosure_url
+    asset_disclosure.url if asset_disclosure
+  end
+
   def budget_url
-    budget.url if budget.present?
+    budget.url if budget
   end
 
   def region_name
-    region.uk_name if budget.present?
+    region.uk_name if region
   end
 
   # проверка на наличие данных
@@ -56,8 +59,12 @@ class City < ActiveRecord::Base
     City.all.map {|c| c.site}
   end
 
+  def self.asset_disclosures
+    City.all.map {|c| c.asset_disclosure}
+  end
+
   def self.links_count
-    sites.compact.count
+    sites.compact.count + asset_disclosures.compact.count
   end
 
   # экспорт в цсв файл

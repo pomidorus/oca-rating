@@ -22,6 +22,6 @@
     .local_site_url
       = link_to 'муниципальный сайт', city.link
     .asset_disclosure_url
-      = city.asset_disclosure? ? link_to('финансовые декларации', city.asset_disclosure) : ''
+      = city.asset_disclosure? ? link_to('финансовые декларации', city.asset_disclosure_url) : ''
     .budget_url
       = city.budget? ? link_to('бюджет', city.budget_url) : ''
