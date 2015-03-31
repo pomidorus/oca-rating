@@ -20,8 +20,8 @@ class City < ActiveRecord::Base
   has_one :site
   accepts_nested_attributes_for :site, update_only: true
 
-  has_one :asset_disclosure
-  accepts_nested_attributes_for :asset_disclosure, update_only: true
+  # has_one :asset_disclosure
+  # accepts_nested_attributes_for :asset_disclosure, update_only: true
 
   has_one :budget
   accepts_nested_attributes_for :budget, update_only: true

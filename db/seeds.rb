@@ -23,8 +23,8 @@ Region.create!({uk_name: 'Хмельницька'})
 Region.create!({uk_name: 'Черкаська'})
 Region.create!({uk_name: 'Чернівецька'})
 Region.create!({uk_name: 'Чернігівська'})
-Region.create!({uk_name: 'АР Крим'})
+Region.create!({uk_name: 'Республіка Крим'})
 
 City.delete_all
-City.create!({uk_title: 'Донецьк', lgs_link: 'http://www.google.com'})
-City.create!({uk_title: 'Полтава', lgs_link: 'http://www.poltava.com'})
+City.create!({uk_title: 'Донецьк'})
+City.create!({uk_title: 'Полтава'})
