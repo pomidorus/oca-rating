@@ -3,7 +3,7 @@ class MainController < ApplicationController
     @regions ||= Region.all
 
     @cities  ||= City.all.to_a
-    @cities  ||= City.joins(:region).where('regions.uk_name = ?', params[:region]).to_a if params[:region].present?
+    @cities  = City.joins(:region).where('regions.uk_name = ?', params[:region]).to_a if params[:region].present?
     @first_city = @cities[0]
 
     @region_header = params[:region].present? ? "#{params[:region]} область" : 'Все области'

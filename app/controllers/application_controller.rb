@@ -5,7 +5,9 @@ class ApplicationController < ActionController::Base
 
   private
   def calculate_count
+    # @cities_count = 0
+    @links_count = 0
     @cities_count ||= City.count
-    @links_count ||= City.links_count
+    #@links_count ||= City.links_count
   end
 end

@@ -11,7 +11,7 @@
         = f.label :link, 'Сайт горсовета'
       = f.text_field :link
     .asset_disclosure_link
-      = f.fields_for :asset_disclosure do |disclosure_fields|
+      = f.fields_for :asset_disclosures do |disclosure_fields|
         .label
           = disclosure_fields.label :url, 'Финансовые декларации'
         = disclosure_fields.text_field :url
