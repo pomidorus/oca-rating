@@ -28,7 +28,7 @@ class City < ActiveRecord::Base
   default_scope {order(uk_title: :asc)}
 
   def asset_disclosure_url
-    asset_disclosure.url if asset_disclosure
+    asset_disclosures.url if asset_disclosures
   end
 
   def budget_url
