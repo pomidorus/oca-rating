@@ -1,13 +1,15 @@
 %section.l-main-index
   = render 'header'
-  = render 'regions_filter'
+  -#= render 'regions_filter'
+  = render 'datasets'
 
   %section.l-cities
     %header
       %h2
         = @region_header
     .s-cities
-      = render 'datasets'
+      -#= render 'datasets'
+      = render 'regions_filter'
       %section.b-cities
         -#= render partial: 'cities/first_city', locals: { city: @first_city }
         = render @cities
