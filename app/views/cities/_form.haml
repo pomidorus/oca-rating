@@ -7,9 +7,10 @@
     .region
       = select('city', 'region_id', Region.all.collect {|r| [r.uk_name, r.id]}, :selected => @city.region_id)
     .site_link
-      .label
-        = f.label :link, 'Сайт горсовета'
-      = f.text_field :link
+      = f.fields_for :site do |site_fields|
+        .label
+          = site_fields.label :url, 'Сайт горсовета'
+        = site_fields.text_field :url
     .asset_disclosure_link
       = f.fields_for :asset_disclosures do |disclosure_fields|
         .label
