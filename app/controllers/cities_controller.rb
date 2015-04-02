@@ -1,27 +1,34 @@
 class CitiesController < ApplicationController
   respond_to :html
 
-  def new
-    @city = City.new
-    @city.build_budget
-  end
-
-  def create
-    @city = City.create(city_params)
+  def index
+    @cities = City.all
+    @cities_count = @cities.length
   end
 
   def show
     @city = City.find(params[:id])
   end
 
-  def index
-    @cities = City.all
-    @cities_count = @cities.length
+  # new
+  def new
+    @city = City.new
+    @city.build_site
+    @city.build_budget
+    @city.build_asset_disclosures
   end
 
+  def create
+    @city = City.create!(city_params)
+    redirect_to :admin_root
+  end
+
+  # edit
   def edit
     @city = City.find(params[:id])
+    @city.build_site if @city.site.nil?
     @city.build_budget if @city.budget.nil?
+    @city.build_asset_disclosures if @city.asset_disclosures.nil?
   end
 
   def update
@@ -29,13 +36,14 @@ class CitiesController < ApplicationController
     if @city.update_attributes(city_params)
       flash[:notice] = "Successfully updated product."
     end
-    respond_with(@city)
+    redirect_to :admin_root
   end
 
   private
 
   def city_params
-    params.require(:city).permit(:uk_title, :region_id, :link, :asset_disclosure, budget_attributes: [:id, :url])
+    params.require(:city).permit(:uk_title, :region_id, :link, site_attributes: [:id, :url],
+                                 asset_disclosures_attributes: [:id, :url], budget_attributes: [:id, :url], )
   end
 
 end

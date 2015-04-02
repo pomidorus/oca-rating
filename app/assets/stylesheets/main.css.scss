@@ -42,17 +42,31 @@
 
 .l-main-index {
   > header {
-    padding: 0 8.3%;
-    padding-bottom: 15px;
-    background-color: #fefefe;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 8.3% 15px 8.3%;
     border-bottom: 4px solid darken(#eee,10);
     color: #444;
+    background-color: #fefefe;
+
+    .right {
+      display: flex;
+    }
+
     h1 {
       margin: 0px 0px;
-      padding-top: 21px;
+      padding: 9px 20px 0px 0px;
     }
     p {
       margin: 7px 0px 0px 0px;
+    }
+
+    p.cities_count, p.links_count {
+      margin-right: 32px;
+      span {
+        font-size: 22px;
+      }
     }
   }
 
@@ -178,6 +192,7 @@
 
     .categories {
       display: flex;
+      align-items: center;
       > div {
         margin-right: 9px;
       }

@@ -7,17 +7,19 @@
     .region
       = select('city', 'region_id', Region.all.collect {|r| [r.uk_name, r.id]}, :selected => @city.region_id)
     .site_link
-      .label
-        = f.label :link, 'Сайт горсовета (ссылка)'
-      = f.text_field :link
+      = f.fields_for :site do |site_fields|
+        .label
+          = site_fields.label :url, 'Сайт горсовета'
+        = site_fields.text_field :url
     .asset_disclosure_link
-      .label
-        = f.label :asset_disclosure, 'Финансовые декларации (ссылка)'
-      = f.text_field :asset_disclosure
+      = f.fields_for :asset_disclosures do |disclosure_fields|
+        .label
+          = disclosure_fields.label :url, 'Финансовые декларации'
+        = disclosure_fields.text_field :url
     .budget_url
       = f.fields_for :budget do |budget_fields|
         .label
-          = budget_fields.label :url, 'Бюджет (ссылка)'
+          = budget_fields.label :url, 'Бюджет'
         = budget_fields.text_field :url
 
     .action-save
