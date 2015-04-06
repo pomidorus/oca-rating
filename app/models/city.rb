@@ -31,6 +31,7 @@ class City < ActiveRecord::Base
     region.uk_name if region
   end
 
+  #-----------------------------
   def site_url
     site.url if site
   end
@@ -43,26 +44,20 @@ class City < ActiveRecord::Base
     budget.url if budget
   end
 
-  # проверка на наличие данных
-  # сайт
-  # def link?
-  #   not link.blank?
-  # end
-
+  #--------------------
   def site?
-    not site.blank?
+    not site_url.blank?
   end
 
-  # декларации
   def asset_disclosure?
-    not asset_disclosure.blank?
+    not asset_disclosure_url.blank?
   end
 
-  # бюджет
   def budget?
     not budget_url.blank?
   end
 
+  #-----------------------------
   def self.sites
     City.all.map {|c| c.site}
   end
@@ -75,6 +70,7 @@ class City < ActiveRecord::Base
     sites.compact.count + asset_disclosures.compact.count
   end
 
+  #---------------------------------------
   # экспорт в цсв файл
   def self.to_csv
     cn = %w(uk_title region site_url asset_disclosure_url budget_url)
