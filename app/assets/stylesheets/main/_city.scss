@@ -95,8 +95,8 @@
     text-align: right;
 
     a {
-      color: darken(#36caff, 20%);
-      border-bottom: 1px dashed rgba(darken(#36caff, 20%), 0.15);
+      color: darken($link-color, 20%);
+      border-bottom: 1px dashed rgba(darken($link-color, 20%), 0.15);
       font-size: 20px;
     }
   }
