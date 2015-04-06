@@ -1,27 +1,24 @@
 .b-city.short
   .top
-    -#.rating
-    -#  = @city_rating.position_of city
     .title
-      = link_to_if city.site?, city.uk_title, city.site_url
+      = link_to_if city.site?, city.uk_title, city.site_url, target: '_blank'
     .categories
-      .site_link
-        .dot{title: 'Муниципальный сайт', class: "#{city.site?}", data: {category: 'local_site'}}
-      .asset_disclosure
-        .dot{title: 'Финансовые декларации', class: "#{city.asset_disclosure?}", data: {category: 'asset_disclosure'}}
-      .budget
-        .dot{title: 'Бюджет', class: "#{city.budget?}"}
-      .street_reestr
-        .dot.nil{title: ''}
-      .street_reestr
-        .dot.nil{title: ''}
-      .street_reestr
-        .dot.nil{title: ''}
-
-  .categories_detail
-    .local_site_url
-      = link_to 'муниципальный сайт', city.site_url
-    .asset_disclosure_url
-      = city.asset_disclosure? ? link_to('финансовые декларации', city.asset_disclosure_url) : ''
-    .budget_url
-      = city.budget? ? link_to('бюджет', city.budget_url) : ''
+      - if city.site?
+        .asset_disclosure
+          - if city.asset_disclosure?
+            = link_to city.asset_disclosure_url, target: '_blank' do
+              .dot{title: 'Финансовые декларации', class: "#{city.asset_disclosure?}"}
+          - else
+            .dot{title: 'Финансовые декларации', class: "#{city.asset_disclosure?}"}
+        .budget
+          - if city.has_budget_url?
+            = link_to city.budget_url, target: '_blank' do
+              .dot{title: 'Бюджет', class: "#{city.budget?}"}
+          - else
+            .dot{title: 'Бюджет', class: "#{city.budget?}"}
+      - else
+        .asset_disclosure
+          .dot.nil
+        .budget
+          .dot.nil
+    .flex

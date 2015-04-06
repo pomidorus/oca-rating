@@ -2,7 +2,11 @@
 @import "global";
 
 .b-cities {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin: 20px 0px 20px 0px;
+  width: 100%;
 }
 
 .b-cities .b-city {
@@ -67,6 +71,14 @@
   &:hover {
     background-color: white;
     box-shadow: 0px 1px 3px rgba(#444, 0.15);
+
+
+
+    .dot.true{
+      width: 30px;
+      height: 20px;
+      border-radius: 25%;
+    }
   }
 
   > div {
@@ -104,9 +116,6 @@
   .top {
     display: flex;
     align-items: center;
-//    > div {
-//      margin-right: 9px;
-//    }
   }
 
   .categories {
@@ -115,6 +124,10 @@
     > div {
       margin-right: 9px;
     }
+  }
+
+  .flex {
+    flex: 1;
   }
 
   .categories_detail {
