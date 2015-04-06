@@ -1,7 +1,7 @@
 .b-city.short
   .top
-    .rating
-      = @city_rating.position_of city
+    -#.rating
+    -#  = @city_rating.position_of city
     .title
       = link_to_if city.site?, city.uk_title, city.site_url
     .categories
