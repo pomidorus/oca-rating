@@ -1,0 +1,24 @@
+.b-city.short
+  .top
+    .title
+      = link_to_if city.site?, city.uk_title, city.site_url, target: '_blank'
+    .categories
+      - if city.site?
+        .asset_disclosure
+          - if city.asset_disclosure?
+            = link_to city.asset_disclosure_url, target: '_blank' do
+              .dot{title: 'Финансовые декларации', class: "#{city.asset_disclosure?}"}
+          - else
+            .dot{title: 'Финансовые декларации', class: "#{city.asset_disclosure?}"}
+        .budget
+          - if city.has_budget_url?
+            = link_to city.budget_url, target: '_blank' do
+              .dot{title: 'Бюджет', class: "#{city.budget?}"}
+          - else
+            .dot{title: 'Бюджет', class: "#{city.budget?}"}
+      - else
+        .asset_disclosure
+          .dot.nil
+        .budget
+          .dot.nil
+    .flex

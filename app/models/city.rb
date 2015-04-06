@@ -57,6 +57,10 @@ class City < ActiveRecord::Base
     not budget_url.blank?
   end
 
+  def has_budget_url?
+    not budget_url.blank?
+  end
+
   #-----------------------------
   def self.sites
     City.all.map {|c| c.site}

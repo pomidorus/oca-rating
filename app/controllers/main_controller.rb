@@ -7,7 +7,7 @@ class MainController < ApplicationController
     @first_city = @cities[0]
 
     @region_header = params[:region].present? ? "#{params[:region]} область" : 'Все области'
-    if (params[:region] == 'АР Крим') then @region_header = params[:region] end
+    if (params[:region] == 'Автономна Республіка Крим') then @region_header = params[:region] end
 
     @city_rating = CityRating.new @cities
     @cities.sort! {|x,y| @city_rating.position_of(x) <=> @city_rating.position_of(y)}
