@@ -88,26 +88,6 @@
     .b-city:nth-child(2n) {
       background-color: rgba(#eee,0.15);
     }
-    .b-city-admin {
-      position: relative;
-      left: -13px;
-      font-size: 1.2em;
-      padding: 15px 13px;
-      display: flex;
-
-      div {
-        width: 350px;
-        a {
-          text-decoration: none;
-          color: inherit;
-          border-bottom: 1px solid #ddd;
-        }
-      }
-
-      .title {
-         width: 240px;
-      }
-    }
   }
 }
 

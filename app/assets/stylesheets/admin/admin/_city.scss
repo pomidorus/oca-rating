@@ -1,0 +1,43 @@
+.b-city-admin {
+  position: relative;
+  left: -13px;
+  font-size: 1.2em;
+  padding: 15px 13px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: #eee;
+  }
+
+  div {
+    width: 200px;
+    margin-right: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+//    flex: 1;
+    a {
+      text-decoration: none;
+      color: inherit;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+
+  .title {
+    width: 240px;
+  }
+
+  .local_site_url {
+    width: 150px;
+    font-size: 14px;
+  }
+
+  .asset_disclosure_url {
+    font-size: 14px;
+  }
+
+  .budget_url {
+    font-size: 14px;
+
+  }
+}
