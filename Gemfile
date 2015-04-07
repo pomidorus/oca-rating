@@ -19,6 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'spyme'
 gem 'nondestructive_migrations'
 gem 'pry-rails', :group => :development
+gem 'bullet', :group => 'development'
 
 group :development, :test do
   gem 'meta_request'

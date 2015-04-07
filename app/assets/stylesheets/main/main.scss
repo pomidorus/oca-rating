@@ -6,8 +6,7 @@
   flex-direction: column;
 
   padding: 25px 0% 0px 0%;
-  margin: 0px 51px 0px 0px;
-//  background: linear-gradient(to top, rgba(254,254,254,1) 0%,rgba(239,239,239,1) 100%);
+  margin: 0px 51px 13px 0px;
 
   .filter {
     text-align: left;
@@ -18,7 +17,9 @@
     font-size: 0.9em;
     color: #444;
     &.active {
-      background-color: #41D7A9;
+      color: white;
+      font-weight: bold;
+      background-color: #9C874F;
       border-radius: 4px;
       .label {
         border: none;
@@ -33,9 +34,9 @@
     }
     &:hover:not(.disabled) {
       &:not(.active) {
-        color: darken($main-color, 30%);
+        color: #9C874F;
         .label {
-          border-bottom: 1px dotted darken($main-color, 30%);
+          border-bottom: 1px dotted #9C874F;
         }
       }
     }
@@ -47,35 +48,6 @@
 }
 
 .l-main-index {
-  > header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 8.3% 15px 8.3%;
-    border-bottom: 4px solid darken(#eee,10);
-    color: #444;
-    background-color: #fefefe;
-
-    .right {
-      display: flex;
-    }
-
-    h1 {
-      margin: 0px 0px;
-      padding: 9px 20px 0px 0px;
-    }
-    p {
-      margin: 7px 0px 0px 0px;
-    }
-
-    p.cities_count, p.links_count {
-      margin-right: 32px;
-      span {
-        font-size: 22px;
-      }
-    }
-  }
-
   .l-add-city {
     padding: 10px 0px;
 

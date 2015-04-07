@@ -16,6 +16,37 @@
               .dot{title: 'Бюджет', class: "#{city.budget?}"}
           - else
             .dot{title: 'Бюджет', class: "#{city.budget?}"}
+        .budget
+          - if city.has_budget_url?
+            = link_to city.budget_url, target: '_blank' do
+              .dot{title: 'Бюджет', class: "#{city.budget?}"}
+          - else
+            .dot{title: 'Бюджет', class: "#{city.budget?}"}
+        .budget
+          - if city.has_budget_url?
+            = link_to city.budget_url, target: '_blank' do
+              .dot{title: 'Бюджет', class: "#{city.budget?}"}
+          - else
+            .dot{title: 'Бюджет', class: "#{city.budget?}"}
+        .budget
+          - if city.has_budget_url?
+            = link_to city.budget_url, target: '_blank' do
+              .dot{title: 'Бюджет', class: "#{city.budget?}"}
+          - else
+            .dot{title: 'Бюджет', class: "#{city.budget?}"}
+        .budget
+          - if city.has_budget_url?
+            = link_to city.budget_url, target: '_blank' do
+              .dot{title: 'Бюджет', class: "#{city.budget?}"}
+          - else
+            .dot{title: 'Бюджет', class: "#{city.budget?}"}
+        .budget
+          - if city.has_budget_url?
+            = link_to city.budget_url, target: '_blank' do
+              .dot{title: 'Бюджет', class: "#{city.budget?}"}
+          - else
+            .dot{title: 'Бюджет', class: "#{city.budget?}"}
+
       - else
         .asset_disclosure
           .dot.nil

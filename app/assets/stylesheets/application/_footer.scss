@@ -1,0 +1,25 @@
+@import "values";
+
+footer {
+  padding: 10px 8.3% 30px 8.3%;
+  color: #333;
+  border-top: 3px solid #9C874F;
+
+  ul {
+    padding: 0 0;
+    li {
+      margin-right: 0.6em;
+      display: inline-block;
+
+      a {
+        border-bottom: 1px solid rgba(#444, 0.15);
+      }
+    }
+  }
+
+  .legal {
+    p {
+      margin: 0 0;
+    }
+  }
+}
