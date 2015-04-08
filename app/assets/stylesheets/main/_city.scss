@@ -94,7 +94,7 @@
 
     a {
       font-size: 1.2em;
-      color: darken($link-color, 20%);
+      color: rgba($link-color, 1);
       border-bottom: 1px dashed rgba(darken($link-color, 20%), 0.15);
     }
   }

@@ -53,9 +53,9 @@ class City < ActiveRecord::Base
     not asset_disclosure_url.blank?
   end
 
-  def budget?
-    not budget_url.blank?
-  end
+  # def budget?
+  #   not budget_url.blank?
+  # end
 
   def has_budget_url?
     not budget_url.blank?
@@ -97,6 +97,15 @@ class City < ActiveRecord::Base
       city.region = region
       city.save!
     end
+  end
+
+  def self.get_all region
+    region.present? ? City.includes(:site, :asset_disclosures, :budget).joins(:region).where('regions.uk_name = ?', region).to_a : City.includes(:site, :asset_disclosures, :budget).to_a
+  end
+
+  def self.sort_by_rating cities
+    rating = CityRating.new cities
+    cities.sort! {|x,y| rating.position_of(x) <=> rating.position_of(y)}
   end
 end
 
