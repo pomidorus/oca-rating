@@ -17,13 +17,13 @@ class City < ActiveRecord::Base
   belongs_to :region
 
   has_one :site, dependent: :destroy
-  accepts_nested_attributes_for :site, reject_if: proc { |attributes| attributes['url'].blank? }
+  accepts_nested_attributes_for :site
 
   has_one :asset_disclosures, class_name: 'AssetDisclosure', dependent: :destroy
-  accepts_nested_attributes_for :asset_disclosures, reject_if: proc { |attributes| attributes['url'].blank? }
+  accepts_nested_attributes_for :asset_disclosures
 
   has_one :budget, dependent: :destroy
-  accepts_nested_attributes_for :budget, reject_if: proc { |attributes| attributes['url'].blank? }
+  accepts_nested_attributes_for :budget
 
   default_scope {order(uk_title: :asc)}
 
