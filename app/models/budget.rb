@@ -12,5 +12,6 @@
 class Budget < ActiveRecord::Base
   belongs_to :city
 
-  default_scope { where.not(city: nil) }
+  default_scope { where.not(url: '') }
+  scope :empty_url, -> { where(url: '') }
 end

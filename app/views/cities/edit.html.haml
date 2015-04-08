@@ -5,4 +5,7 @@
     %header
       %h2
         Редактировать город
+      .actions
+        %p
+          = link_to 'Destroy',  @city,  method: :delete, data: { confirm: 'Are you sure?' }
   = render 'cities/form'

@@ -16,16 +16,18 @@
 class City < ActiveRecord::Base
   belongs_to :region
 
-  has_one :site
-  accepts_nested_attributes_for :site
+  has_one :site, dependent: :destroy
+  accepts_nested_attributes_for :site, reject_if: proc { |attributes| attributes['url'].blank? }
 
-  has_one :asset_disclosures, class_name: 'AssetDisclosure'
-  accepts_nested_attributes_for :asset_disclosures
+  has_one :asset_disclosures, class_name: 'AssetDisclosure', dependent: :destroy
+  accepts_nested_attributes_for :asset_disclosures, reject_if: proc { |attributes| attributes['url'].blank? }
 
-  has_one :budget
-  accepts_nested_attributes_for :budget
+  has_one :budget, dependent: :destroy
+  accepts_nested_attributes_for :budget, reject_if: proc { |attributes| attributes['url'].blank? }
 
   default_scope {order(uk_title: :asc)}
+
+  scope :with_sites, -> { includes(:site) }
 
   def region_name
     region.uk_name if region
@@ -59,19 +61,6 @@ class City < ActiveRecord::Base
 
   def has_budget_url?
     not budget_url.blank?
-  end
-
-  #-----------------------------
-  def self.sites
-    City.all.map {|c| c.site}
-  end
-
-  def self.asset_disclosures
-    City.all.map {|c| c.asset_disclosure}
-  end
-
-  def self.links_count
-    sites.compact.count + asset_disclosures.compact.count
   end
 
   #---------------------------------------

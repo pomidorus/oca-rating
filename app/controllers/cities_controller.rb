@@ -39,10 +39,16 @@ class CitiesController < ApplicationController
     redirect_to :admin_root
   end
 
+  def destroy
+    city = City.find params[:id]
+    city.destroy
+    redirect_to :admin_root
+  end
+
   private
 
   def city_params
-    params.require(:city).permit(:uk_title, :region_id, :link, site_attributes: [:id, :url],
+    params.require(:city).permit(:uk_title, :region_id, site_attributes: [:id, :url],
                                  asset_disclosures_attributes: [:id, :url], budget_attributes: [:id, :url], )
   end
 
