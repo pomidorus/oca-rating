@@ -1,12 +1,8 @@
 %header.global-header
   %h1
-    = link_to_unless_current('РД', {controller: 'main', action: 'index'})
+    .dot.false
+    .dot.true
+    = link_to_unless_current(t('application.header.app_name'), {controller: 'main', action: 'index'})
   %p
-    Рейтинг доступности открытых данных городов в Украине
+    Прямые ссылки открытых данных городов Украины
   .right
-    %p.cities_count
-      %span= @cities_count
-      городов
-    %p.links_count
-      %span= @links_count
-      ссылок
