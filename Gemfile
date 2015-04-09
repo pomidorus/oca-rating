@@ -18,9 +18,10 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'spyme'
 gem 'nondestructive_migrations'
+gem 'activerecord-postgis-adapter'
 
 group :development, :test do
-  gem 'meta_request'
+  # gem 'meta_request'
   gem 'quiet_assets'
   gem 'rspec-rails', '~> 3.0.0'
   gem 'spring'

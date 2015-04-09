@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305161409) do
+ActiveRecord::Schema.define(version: 20150307203803) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "postgis"
 
   create_table "asset_disclosures", force: true do |t|
     t.string   "url"
@@ -23,7 +24,7 @@ ActiveRecord::Schema.define(version: 20150305161409) do
     t.datetime "updated_at"
   end
 
-  add_index "asset_disclosures", ["city_id"], name: "index_asset_disclosures_on_city_id", using: :btree
+  add_index "asset_disclosures", ["city_id"], :name => "index_asset_disclosures_on_city_id"
 
   create_table "budgets", force: true do |t|
     t.string   "url"
@@ -42,9 +43,10 @@ ActiveRecord::Schema.define(version: 20150305161409) do
     t.integer  "region_id"
     t.string   "link"
     t.string   "asset_disclosure"
+    t.spatial  "latlon",           limit: {:srid=>4326, :type=>"point", :geographic=>true}
   end
 
-  add_index "cities", ["region_id"], name: "index_cities_on_region_id", using: :btree
+  add_index "cities", ["region_id"], :name => "index_cities_on_region_id"
 
   create_table "data_migrations", force: true do |t|
     t.string "version"
@@ -63,6 +65,6 @@ ActiveRecord::Schema.define(version: 20150305161409) do
     t.datetime "updated_at"
   end
 
-  add_index "sites", ["city_id"], name: "index_sites_on_city_id", using: :btree
+  add_index "sites", ["city_id"], :name => "index_sites_on_city_id"
 
 end

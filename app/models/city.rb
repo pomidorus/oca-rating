@@ -28,6 +28,9 @@ class City < ActiveRecord::Base
 
   default_scope {order(uk_title: :asc)}
 
+  # self.rgeo_factory_generator = RGeo::Geos.factory_generator
+  set_rgeo_factory_for_column(:latlon, RGeo::Geographic.spherical_factory(:srid => 4326))
+
   def budget_url
     budget.url if budget.present?
   end
