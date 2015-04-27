@@ -9,7 +9,7 @@ gem 'foreman'
 gem 'haml-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
-gem 'pg'
+gem 'pg', '0.17.1'
 gem 'puma'
 gem 'rails', '4.1.6'
 gem 'sass-rails', '~> 4.0.3'
@@ -42,3 +42,4 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'ux', path: 'engines/ux'

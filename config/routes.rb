@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount Ux::Engine, at: '/ux'
 
   resource :datasets, only: [] do
     get 'local_site'
