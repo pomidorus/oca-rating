@@ -1,0 +1,18 @@
+%nav.main-menu
+  .count
+    .cities_count
+      %span= @cities_count
+      %div
+        города
+    .links_count
+      %span= @links_count
+      %div
+        ссылки
+  .datasets
+    %nav
+      .dataset{data: {category: 'local_site'}}
+        = link_to 'Муниципальный сайт', root_path
+      .dataset{data: {category: 'asset_disclosure'}}
+        = link_to 'Финансовые декларации', root_path
+      .dataset{data: {category: 'budget'}}
+        = link_to 'Бюджет', root_path

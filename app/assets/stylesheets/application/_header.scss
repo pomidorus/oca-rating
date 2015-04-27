@@ -1,3 +1,5 @@
+@import "values";
+
 header.global-header {
   display: flex;
   align-items: center;
@@ -5,7 +7,7 @@ header.global-header {
   padding: 0px 8.3% 15px 8.3%;
   border-bottom: 4px solid #9C874F;
   color: #444;
-  background-color: #fefefe;
+  background-color: rgba(lighten($second-color, 38%),1);
 
   .right {
     display: flex;
@@ -14,6 +16,13 @@ header.global-header {
   h1 {
     margin: 0px 0px;
     padding: 9px 20px 0px 0px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+
+    .dot {
+      margin-right: 8px;
+    }
   }
   p {
     margin: 7px 0px 0px 0px;

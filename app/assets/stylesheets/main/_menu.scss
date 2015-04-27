@@ -1,0 +1,48 @@
+@import "values";
+
+nav.main-menu {
+  background-color: rgba(lighten($second-color, 7%),1);
+  border-bottom: 4px solid #ccc;
+  padding: 29px 8.3% 36px 8.3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .count {
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+  .cities_count {
+    padding: 0px 37px 0px 0px;
+  }
+
+  .cities_count, .links_count {
+    span {
+      font-size: 43px;
+    }
+    color: $link-color;
+    text-align: center;
+  }
+
+  .datasets {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 2;
+  }
+
+  .datasets nav {
+    display: flex;
+
+    div:not(:last-child) {
+      padding: 0px 36px 0px 0px;
+    }
+
+    a {
+      color: $link-color;
+      font-size: 20px;
+      border-bottom: 1px solid rgba($link-color, 0.2);
+    }
+  }
+}
