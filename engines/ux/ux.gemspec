@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*", "Rakefile", "README.rdoc"]
 
-  s.add_dependency "rails", "~> 4.1.6"
-  s.add_dependency "pg", "0.17.1"
+  s.add_dependency 'rails', '~> 4.1.6'
+  s.add_dependency 'pg', '0.17.1'
+  s.add_dependency 'haml-rails'
 end

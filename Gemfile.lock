@@ -2,6 +2,7 @@ PATH
   remote: engines/ux
   specs:
     ux (0.0.1)
+      haml-rails
       pg (= 0.17.1)
       rails (~> 4.1.6)
 
