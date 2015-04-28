@@ -1,5 +1,6 @@
 class CitiesController < ApplicationController
   respond_to :html
+  before_filter :find_city, only: [:show, :edit, :update, :destroy]
 
   def index
     @cities = City.all
@@ -7,7 +8,6 @@ class CitiesController < ApplicationController
   end
 
   def show
-    @city = City.find(params[:id])
   end
 
   # new
@@ -25,14 +25,12 @@ class CitiesController < ApplicationController
 
   # edit
   def edit
-    @city = City.find(params[:id])
     @city.build_site if @city.site.nil?
     @city.build_budget if @city.budget.nil?
     @city.build_asset_disclosures if @city.asset_disclosures.nil?
   end
 
   def update
-    @city = City.find(params[:id])
     if @city.update_attributes(city_params)
       flash[:notice] = "Successfully updated product."
     end
@@ -40,8 +38,7 @@ class CitiesController < ApplicationController
   end
 
   def destroy
-    city = City.find params[:id]
-    city.destroy
+    @city.destroy
     redirect_to :admin_root
   end
 
@@ -52,4 +49,7 @@ class CitiesController < ApplicationController
                                  asset_disclosures_attributes: [:id, :url], budget_attributes: [:id, :url], )
   end
 
+  def find_city
+    @city = City.find_by_slug!(params[:id])
+  end
 end

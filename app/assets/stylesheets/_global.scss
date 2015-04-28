@@ -19,9 +19,7 @@ a {
     width: 14px;
     height: 14px;
     background: $dot-background;
-//    font-size: 12px;
-//    font-weight: bold;
-    color: #ffffff;
+    color: rgba(#ffffff,0);
     border: 1px rgba($dot-background, 0.5) solid;
   }
 

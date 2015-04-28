@@ -20,6 +20,7 @@ gem 'spyme'
 gem 'nondestructive_migrations'
 gem 'pry-rails', :group => :development
 gem 'bullet', :group => 'development'
+gem 'babosa'
 
 group :development, :test do
   gem 'meta_request'

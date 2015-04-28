@@ -29,8 +29,21 @@ class City < ActiveRecord::Base
 
   scope :with_sites, -> { includes(:site) }
 
+  # validates :slug, uniqueness: true, presence: true
+  before_validation :generate_slug
+
+  validates_presence_of :region
+
   def region_name
     region.uk_name if region
+  end
+
+  def to_param
+    slug
+  end
+
+  def generate_slug
+    self.slug ||= uk_title.to_slug.transliterate(:ukrainian).to_s.downcase.parameterize
   end
 
   #-----------------------------
@@ -54,10 +67,6 @@ class City < ActiveRecord::Base
   def asset_disclosure?
     not asset_disclosure_url.blank?
   end
-
-  # def budget?
-  #   not budget_url.blank?
-  # end
 
   def has_budget_url?
     not budget_url.blank?
@@ -95,6 +104,10 @@ class City < ActiveRecord::Base
   def self.sort_by_rating cities
     rating = CityRating.new cities
     cities.sort! {|x,y| rating.position_of(x) <=> rating.position_of(y)}
+  end
+
+  def self.dublicates
+    select(:uk_title).group(:uk_title).having('count(*) > 1')
   end
 end
 

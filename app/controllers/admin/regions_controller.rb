@@ -1,4 +1,5 @@
 class Admin::RegionsController < ApplicationController
+  layout 'admin'
 
   def index
     @regions ||= Region.all

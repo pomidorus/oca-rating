@@ -1,5 +1,6 @@
 ua:
   application:
     header:
-      app_name: "Важливі:посилання"
+      app_name: "Важливі::Посилання"
+      app_description: 'Каталог відкритих даних міст України'
 

@@ -33,6 +33,7 @@ GEM
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
     arel (5.0.1.20140414130214)
+    babosa (1.0.2)
     builder (3.2.2)
     bullet (4.14.4)
       activesupport (>= 3.0.0)
@@ -168,6 +169,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   annotate (~> 2.6.5)
+  babosa
   bullet
   coffee-rails (~> 4.0.0)
   foreman
