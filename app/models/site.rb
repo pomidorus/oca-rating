@@ -14,4 +14,7 @@ class Site < ActiveRecord::Base
 
   default_scope { where.not(url: '') }
   scope :empty_url, -> { where(url: '') }
+  scope :with_city, -> { includes(:city).where.not(cities: {id: nil}) }
+
+  # Site.includes(:city).where(cities: {id: nil})
 end

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'municipal_sites/index'
+
   root 'main#index'
 
   namespace :admin do
@@ -8,6 +10,10 @@ Rails.application.routes.draw do
     post 'data/import'
     root 'admin#index'
   end
+
+  resources :municipal_sites, only: [:index]
+  resources :budgets, only: [:index]
+  resources :deklaracii, only: [:index]
 
   resources :link, path: '', only: [:show] do
   end

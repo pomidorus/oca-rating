@@ -109,5 +109,8 @@ class City < ActiveRecord::Base
   def self.dublicates
     select(:uk_title).group(:uk_title).having('count(*) > 1')
   end
+
+  # city without sites
+  # City.includes(:site).where(sites: {city_id: nil})
 end
 

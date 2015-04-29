@@ -33,15 +33,24 @@ nav.main-menu {
   }
 
   .datasets nav {
+    align-items: center;
     display: flex;
 
     div:not(:last-child) {
       padding: 0px 36px 0px 0px;
     }
 
+    font-size: 20px;
+
+    span {
+      background-color: $link-color;
+      color: $dot-background;
+      border-radius: 5px;
+      padding: 3px 10px 5px 10px;
+    }
+
     a {
       color: $link-color;
-      font-size: 20px;
       border-bottom: 1px solid rgba($link-color, 0.2);
     }
   }

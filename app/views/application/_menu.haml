@@ -11,7 +11,8 @@
   .datasets
     %nav
       .dataset{data: {category: 'local_site'}}
-        = link_to 'Муниципальный сайт', root_path
+        = link_to_unless_current 'Муниципальный сайт', municipal_sites_path do
+          = "<span>Муниципальный сайт</span>".html_safe
       .dataset{data: {category: 'asset_disclosure'}}
         = link_to 'Финансовые декларации', root_path
       .dataset{data: {category: 'budget'}}
