@@ -4,4 +4,21 @@
 
 .municipal-sites.index {
 
+  .sites {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 0px 8.3% 0px 8.3%;
+
+  }
+
+  .site {
+    .url {
+      font-size: 10px;
+    }
+  }
+
 }
+
+
