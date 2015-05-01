@@ -1,0 +1,18 @@
+.admin-header {
+  padding: 0px 8.3% 0px 8.3%;
+  height: 60px;
+  background-color: #184F3F;
+  font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+  display: flex;
+  align-items: center;
+
+  h2.logo {
+    margin: 0 0;
+    margin-right: 85px;
+    color: #eee;
+  }
+
+  a {
+    color: #eee;
+  }
+}

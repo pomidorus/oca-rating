@@ -3,3 +3,8 @@ ua:
     header:
       app_name: "Важливі:посилання"
 
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'Errorr'
+

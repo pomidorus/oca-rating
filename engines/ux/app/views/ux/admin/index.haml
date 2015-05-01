@@ -1,0 +1,8 @@
+%section.admin.admin-index
+  %header
+    %h3
+      Тестировщики
+    .action
+      = button_to 'Добавить', new_tester_path, method: :get
+  %section.testers
+    = render partial: 'tester', collection: @testers

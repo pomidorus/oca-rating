@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305161409) do
+ActiveRecord::Schema.define(version: 20150501112947) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,5 +64,16 @@ ActiveRecord::Schema.define(version: 20150305161409) do
   end
 
   add_index "sites", ["city_id"], name: "index_sites_on_city_id", using: :btree
+
+  create_table "ux_testers", force: true do |t|
+    t.string   "name"
+    t.string   "access_code"
+    t.string   "profession"
+    t.string   "profile"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ux_testers", ["access_code"], name: "index_ux_testers_on_access_code", using: :btree
 
 end

@@ -1,0 +1,16 @@
+%section.tester.tester-new
+  %header
+    %h3
+      Новый тестировщик
+  = form_for @tester, class: 'new' do |tester|
+    .name
+      = label :name, 'Фамилия Имя'
+      = tester.text_field :name
+    .profession
+      = label :profession, 'Профессия'
+      = tester.text_field :profession
+    .profile
+      = label :profile, 'Профиль ФБ ВК Имейл'
+      = tester.text_field :profile
+    .action
+      = tester.submit 'Добавить'
