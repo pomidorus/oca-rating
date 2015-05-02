@@ -1,0 +1,64 @@
+@import "values";
+
+header.link-header {
+  display: flex;
+  align-items: center;
+  //justify-content: space-between;
+  padding: 0px 8.3% 0px 8.3%;
+  height: 47px;
+  border-bottom: 4px solid #9C874F;
+  color: #444;
+  background-color: rgba(lighten($second-color, 38%),1);
+
+  .right {
+    display: flex;
+  }
+
+  .space {
+    width: 74px;
+  }
+
+  h1.logo {
+    margin: 0px 0px;
+    padding: 0px 0px 0px 0px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+    }
+
+    .dot {
+      margin-right: 3px;
+    }
+
+  }
+
+  nav {
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    align-items: center;
+
+    a {
+      border-bottom: 1px solid #BBBBBB;
+    }
+
+    .item:not(:last-child) {
+      margin-right: 23px;
+    }
+
+    .item span {
+      background-color: $link-color;
+      color: $dot-background;
+      border-radius: 5px;
+      padding: 2px 8px 4px 8px;
+    }
+
+    .item .empty {
+      color: #c0c0c0;
+    }
+  }
+}

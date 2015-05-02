@@ -1,0 +1,23 @@
+%header.link-header
+  %h1.logo
+    = link_to root_path do
+      .dot.false
+      .dot.true
+    = content_for(:page_title)
+  .space
+  %nav
+    .item
+      = link_to_unless_current 'сайт', link_path(@city) do
+        = "<span>сайт</span>".html_safe
+    .item
+      - if @city.asset_disclosure?
+        = link_to_unless_current 'декларации', link_disclosures_path(@city) do
+          = "<span>декларации</span>".html_safe
+      - else
+        .empty= 'декларации'
+    .item
+      - if @city.has_budget_url?
+        = link_to_unless_current 'бюджет', link_budget_path(@city) do
+          = "<span>бюджет</span>".html_safe
+      - else
+        .empty= 'бюджет'

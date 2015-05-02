@@ -1,4 +1,5 @@
 class LinkController < ApplicationController
+  layout 'link'
   before_filter :find_city, only: [:show, :budget, :disclosures]
 
   def show

@@ -1,2 +1,5 @@
+- content_for :page_title, @city.uk_title
+- content_for :page_category, "бюджет"
+
 %section.link.link-budget
   %iframe{src:"#{@city.budget_url}"}

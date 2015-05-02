@@ -2,14 +2,11 @@
 %html
   %head
     %title
-      = [content_for(:page_title), t('application.header.app_name')].compact.uniq.join(" - ")
+      = [content_for(:page_title), content_for(:page_category)].compact.uniq.join(" - ")
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
     = favicon_link_tag 'favicon.ico'
   %body
-    = render 'application/header'
-
+    = render 'application/link_header'
     = yield
-
-    = render 'application/footer'

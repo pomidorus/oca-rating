@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-
-  get 'pages/about_project'
-
   get 'info/about-important-links', to: 'pages#about_project'
-
   get ':id/budget', to: 'link#budget', as: :link_budget
   get ':id/deklaracii', to: 'link#disclosures', as: :link_disclosures
 
