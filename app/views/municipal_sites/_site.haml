@@ -1,8 +1,7 @@
 %article.site
   .uk_title
-    = site.city.uk_title
+    = link_to site.city_name, link_path(site.city), target: '_blank'
   .screenshot
-    %a{href:''}
-      = image_tag 'https://avatars.yandex.net/get-yaca/jKeghJjs4xGejNzp9p27Iw/normal'
-  .url
-    = site.url
+    = link_to link_path(site.city), target: '_blank' do
+      = cl_image_tag("#{site.city.to_param}.jpg")
+      -#= image_tag "http://img.bitpixels.com/getthumbnail?code=80416&size=200&url=#{site.url}"

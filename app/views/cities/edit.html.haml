@@ -1,3 +1,5 @@
+- page_rank = PageRankr.ranks(@city.site_url, :google)[:google]
+
 = render partial: 'admin/header'
 
 %article.l-city-new
@@ -5,6 +7,8 @@
     %header
       %h2
         Редактировать город
+      .page-rank
+        = "Google PR #{page_rank}"
       .actions
         %p
           = link_to 'Destroy',  @city,  method: :delete, data: { confirm: 'Are you sure?' }

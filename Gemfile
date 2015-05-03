@@ -21,6 +21,8 @@ gem 'nondestructive_migrations'
 gem 'pry-rails', :group => :development
 gem 'bullet', :group => 'development'
 gem 'babosa'
+gem 'PageRankr'
+gem 'cloudinary'
 
 group :development, :test do
   gem 'meta_request'

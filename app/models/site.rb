@@ -14,7 +14,11 @@ class Site < ActiveRecord::Base
 
   default_scope { where.not(url: '') }
   scope :empty_url, -> { where(url: '') }
-  scope :with_city, -> { includes(:city).where.not(cities: {id: nil}) }
+  scope :with_city, -> { includes(:city).where.not(cities: {id: nil}).order('cities.uk_title ASC') }
 
   # Site.includes(:city).where(cities: {id: nil})
+
+  def city_name
+    city.uk_title
+  end
 end

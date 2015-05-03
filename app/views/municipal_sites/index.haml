@@ -1,15 +1,8 @@
 %section.municipal-sites.index
   = render 'application/menu'
 
+  %section.sites-info
+    = "#{@sites.length} ссылка"
   %section.sites
     = render partial: 'site', collection: @sites
-  -#%section.l-cities
-  -#  %header
-  -#    %h2
-  -#      = @region_header
-  -#  .s-cities
-  -#    = render 'regions_filter'
-  -#    %section.b-cities
-  -#      = render partial: 'city', collection: @cities
-
 
