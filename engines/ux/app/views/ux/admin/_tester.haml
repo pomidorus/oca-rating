@@ -1,5 +1,9 @@
 %article.tester
-  .name
-    = link_to tester.name, tester.profile
-  .profession
-    = tester.profession
+  .column.one
+    .name
+      = link_to tester.name, tester.profile
+    .profession
+      = tester.profession
+  .column.second
+    .code
+      = tester.access_code

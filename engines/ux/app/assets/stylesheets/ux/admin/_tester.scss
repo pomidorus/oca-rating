@@ -1,7 +1,16 @@
 .admin-index {
 
   .tester {
+    display: flex;
     padding: 10px 0px 10px 0px;
+
+    .column.one {
+      flex: 0.3
+    }
+
+    .column.second {
+      flex: 0.5
+    }
 
     .profession {
       font-size: 12px;
